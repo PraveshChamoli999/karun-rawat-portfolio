@@ -2,28 +2,36 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="py-3 px-[12%] flex justify-between">
-      <div className="logo  bg-slate-600"></div>
-      <ul className="items_container flex justify-around items-center m-0 p-0">
-        <li className="w-36 border-r-2 border-black h-16 flex justify-center items-center text-center">
+    <div className="py-3 px-[12%] flex justify-between bg-[#02458A] text-white">
+      <div className="logo ">
+        <img src={require("../assets/iitrLogo.png")} width={70}></img>
+      </div>
+      <ul className="items_container flex gap-5 justify-around items-center m-0 p-0">
+        <li className=" h-16 flex justify-center items-center text-center">
           Home
         </li>
-        <li className="w-36 border-r-2 border-black h-16 flex justify-center items-center text-center">
+        <div className="h-8 w-[1px] bg-white"></div>
+        <li className=" h-16 flex justify-center items-center text-center">
           About me
         </li>
-        <li className="w-36 border-r-2 border-black h-16 flex justify-center items-center text-center">
+        <div className="h-8 w-[1px] bg-white"></div>
+        <li className=" h-16 flex justify-center items-center text-center">
           Research & Tech
         </li>
-        <li className="w-36 border-r-2 border-black h-16 flex justify-center items-center text-center">
+        <div className="h-8 w-[1px] bg-white"></div>
+        <li className=" h-16 flex justify-center items-center text-center">
           Publications
         </li>
-        <li className="w-36 border-r-2 border-black h-16 flex justify-center items-center text-center">
+        <div className="h-8 w-[1px] bg-white"></div>
+        <li className=" h-16 flex justify-center items-center text-center">
           Training & Workshops
         </li>
-        <li className="w-36 border-r-2 border-black h-16 flex justify-center items-center text-center">
+        <div className="h-8 w-[1px] bg-white"></div>
+        <li className=" h-16 flex justify-center items-center text-center">
           Team & Members
         </li>
-        <li className="w-36 border-r-2 border-black h-16 flex justify-center items-center text-center">
+        <div className="h-8 w-[1px] bg-white"></div>
+        <li className=" h-16 flex justify-center items-center text-center">
           News & Highlights
         </li>
       </ul>
