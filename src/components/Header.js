@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="py-3 px-[12%] flex justify-between bg-[#02458A] text-white">
+    <div className="py-3 px-[12%] flex justify-between bg-[#FF5733] text-white">
       <div className="logo ">
         <img src={require("../assets/iitrLogo.png")} width={70}></img>
       </div>

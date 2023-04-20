@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+@media screen and (max-width: 1023px) {
+  div.profile-details {
+    color: black;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

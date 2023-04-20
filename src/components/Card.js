@@ -3,7 +3,7 @@ import React from "react";
 const Card = ({ data }) => {
   return (
     <div
-      className={`card w-[330px] h-[400px] flex flex-col justify-start items-center text-white  `}
+      className={`card h-[400px] lg:h-[450px] flex flex-col justify-start items-center text-white  `}
       style={{ backgroundColor: `#${data.color}` }}
     >
       <div className="upperImg bg-[#e6fdff] w-full flex flex-col justify-start items-center">
