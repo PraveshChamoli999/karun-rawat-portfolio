@@ -1,12 +1,8 @@
 import React from "react";
-import { Header, Hero } from "../components";
-import { BsLinkedin, BsTwitter } from "react-icons/bs";
 
 const AboutMe = () => {
   return (
     <div className="">
-      <Header />
-      <Hero />
 
       {/* ************************Research Section ************************ */}
       <div className="research bg-[#f9f9f9] py-10 ">

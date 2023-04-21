@@ -1,11 +1,8 @@
 import React from "react";
-import { Header, Hero } from "../components";
 
 const ReasearchandTech = () => {
   return (
     <div>
-      <Header />
-      <Hero />
       <div className="research bg-[#f9f9f9] py-10 ">
         <h2 className="text-center text-[2rem] text-[#1d466e] font-semibold mb-5">
           Research & Development

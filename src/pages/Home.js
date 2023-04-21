@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Header, Hero } from "../components";
+import { Card } from "../components";
 
 const researchData = [
   {
@@ -31,9 +31,6 @@ const researchData = [
 const Home = () => {
   return (
     <div>
-      <Header />
-      <Hero />
-
       {/* ************************Research Section ************************ */}
       <div className="research my-2 xl:my-16">
         <h2 className="text-center text-[2rem] text-[#1d466e] font-semibold mb-5 py-3 xl:py-12">
