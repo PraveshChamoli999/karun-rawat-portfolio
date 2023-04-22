@@ -1,4 +1,4 @@
-import { AboutMe, Home, NewsAndHighlights, Publications, ReasearchandTech, TrainingAndWorkshops } from "./pages";
+import { AboutMe, Home, NewsAndHighlights, Publications, ReasearchandTech, TeamAndMembers, TrainingAndWorkshops } from "./pages";
 import { Route, Routes } from "react-router-dom";
 import { Header, Hero } from "./components";
 function App() {
@@ -20,7 +20,7 @@ function App() {
           exact
           element={<TrainingAndWorkshops />}
         />
-        <Route path="/team-members" exact element={<ReasearchandTech />} />
+        <Route path="/team-members" exact element={<TeamAndMembers />} />
         <Route path="/news-highlights" exact element={<NewsAndHighlights />} />
       </Routes>
     </div>
