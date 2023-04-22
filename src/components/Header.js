@@ -44,7 +44,7 @@ const Header = () => {
           </li>
         </Link>
         <div className="h-8 w-[1px] bg-white"></div>
-        <Link to="/news-higlights">
+        <Link to="/news-highlights">
           <li className=" h-16 flex justify-center items-center text-center hover:text-[#DCDCDC] cursor-pointer">
             News & Highlights
           </li>
