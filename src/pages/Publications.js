@@ -14,7 +14,7 @@ const Publications = () => {
       if (res.error) {
         setError(res.error);
       } else {
-        setPublications(res.data);
+        setPublications(res.data || []);
       }
     }
     fetchPublications();
@@ -37,7 +37,9 @@ const Publications = () => {
                     {publications.filter((publication) => {
                       return publication.type === type.toLowerCase();
                     }).length > 0 ? (
-                      <h2 className="text-3xl font-semibold mb-3">{type + "s"}</h2>
+                      <h2 className="text-3xl font-semibold mb-3">
+                        {type + "s"}
+                      </h2>
                     ) : (
                       <></>
                     )}
@@ -48,11 +50,11 @@ const Publications = () => {
                         })
                         .map((publication) => {
                           return (
-                            <li
-                              key={publication._id}
-                            >
+                            <li key={publication._id}>
                               <p>{publication.content}</p>
-                              <p className="text-right pr-10">-{publication.year}</p>
+                              <p className="text-right pr-10">
+                                -{publication.year}
+                              </p>
                             </li>
                           );
                         })}

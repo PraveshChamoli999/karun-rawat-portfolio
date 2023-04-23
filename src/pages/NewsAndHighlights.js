@@ -13,7 +13,7 @@ const NewsAndHighlights = () => {
       if (res.error) {
         setError(res.error);
       } else {
-        setNewsList(res.data);
+        setNewsList(res.data || []);
       }
     }
     fetchNewsList();
