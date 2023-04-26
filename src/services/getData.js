@@ -1,7 +1,7 @@
 import apiService from "./apiService";
 
 export const getAllNews = async () => {
-  const res = await apiService.get(`/service/news`);
+  const res = await apiService.get(`/dashboard/publication?type=news`);
   if (!res.error && !res.data?.error) {
     res.data = res.data.data;
   } else {

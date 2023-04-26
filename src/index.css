@@ -18,6 +18,37 @@ code {
   }
 }
 
+@media screen and (min-width: 1120px) {
+  div.research {
+    margin-top: 2rem !important; 
+    margin-bottom: 2rem !important;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  div.research {
+    margin-top: 4rem !important; 
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  div.research {
+    margin-top: 6rem !important; 
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  div.research {
+    margin-top: 8rem !important; 
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  div.research {
+    margin-top: 10rem !important;
+  }
+} 
+ 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { getAllNews } from "../services/getData";
-import NewsCard from "../components/NewsCard";
 
 const NewsAndHighlights = () => {
   const [NewsList, setNewsList] = useState([]);
@@ -21,7 +20,7 @@ const NewsAndHighlights = () => {
 
   return (
     <div>
-      <div className="research my-2 xl:my-16">
+      <div className="research my-2 ">
         <h2 className="text-center text-[2rem] text-[#1d466e] font-semibold pt-3 xl:pt-12">
           News and Highlights
         </h2>
@@ -30,13 +29,15 @@ const NewsAndHighlights = () => {
             <div>{error}</div>
           ) : (
             <div className="">
-              <div className="p-4">
-                <div className="grid grid-cols-1 gap-6 lg:gap-1 md:grid-cols-2 lg:grid-cols-3">
-                  {NewsList.map((news) => {
-                    return <NewsCard news={news}></NewsCard>;
+              <ul className="list-disc p-2">
+                {NewsList.map((news) => {
+                    return (
+                      <li key={news._id}>
+                        <p>{news.content}</p>
+                      </li>
+                    );
                   })}
-                </div>
-              </div>
+              </ul>
             </div>
           )}
         </div>

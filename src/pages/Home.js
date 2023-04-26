@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div>
       {/* ************************Research Section ************************ */}
-      <div className="research my-2 xl:my-16">
+      <div className="research my-2 ">
         <h2 className="text-center text-[2rem] text-[#1d466e] font-semibold mb-5 py-3 xl:py-12">
           Areas of Research
         </h2>

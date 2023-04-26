@@ -102,7 +102,7 @@ const TeamAndMembers = () => {
     ],
   ];
   return (
-    <div className="research my-2 xl:my-16">
+    <div className="research my-2 ">
       <h2 className="text-center text-[2rem] text-[#1d466e] font-semibold pt-3 xl:pt-12">
         Team And Members
       </h2>
