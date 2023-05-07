@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f7f7f7;
 }
 
 code {
@@ -12,7 +13,7 @@ code {
     monospace;
 }
 
-@media screen and (max-width: 1023px) {
+/* @media screen and (max-width: 1023px) {
   div.profile-details {
     color: black;
   }
@@ -20,26 +21,26 @@ code {
 
 @media screen and (min-width: 1120px) {
   div.research {
-    margin-top: 2rem !important; 
+    margin-top: 2rem !important;
     margin-bottom: 2rem !important;
   }
 }
 
 @media screen and (min-width: 1220px) {
   div.research {
-    margin-top: 4rem !important; 
+    margin-top: 4rem !important;
   }
 }
 
 @media screen and (min-width: 1300px) {
   div.research {
-    margin-top: 6rem !important; 
+    margin-top: 6rem !important;
   }
 }
 
 @media screen and (min-width: 1400px) {
   div.research {
-    margin-top: 8rem !important; 
+    margin-top: 8rem !important;
   }
 }
 
@@ -47,8 +48,8 @@ code {
   div.research {
     margin-top: 10rem !important;
   }
-} 
- 
+} */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

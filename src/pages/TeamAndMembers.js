@@ -102,14 +102,18 @@ const TeamAndMembers = () => {
     ],
   ];
   return (
-    <div className="research my-2 ">
-      <h2 className="text-center text-[2rem] text-[#1d466e] font-semibold pt-3 xl:pt-12">
+    // <div className="my-7 py-20">
+    <div className="bg-[#F7F7F7] py-10">
+      <h2 className="text-center text-[2rem] text-[#1d466e] font-semibold mb-10">
         Team And Members
       </h2>
-      <div className="cardContainer flex flex-col shadow-md gap-2 bg-white mx-[12%] px-8 py-10">
+      <div className="cardContainer flex flex-col shadow-md rounded-lg gap-5 bg-white mx-[10%] px-12 py-14">
         <div>
-          <h3 className="text-3xl font-semibold mb-3">M.Tech. Supervision</h3>
-          <ul className="list-disc p-6">
+          <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
+            <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
+            M.Tech. Supervision
+          </h3>
+          <ul className="mt-4 list-disc pl-5 flex flex-col gap-4">
             {mtechSupervisions.map((mtechSupervision, index) => (
               <li key={index}>
                 <div key={index} className="px-3 py-1">
@@ -119,8 +123,9 @@ const TeamAndMembers = () => {
             ))}
           </ul>
         </div>
-        <div className="px-5 py-3">
-          <h3 className="text-3xl font-semibold mb-3">
+        <div className=" mt-10">
+          <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
+            <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
             Placement details of students supervised
           </h3>
         </div>
@@ -170,6 +175,7 @@ const TeamAndMembers = () => {
           </table>
         </div>
       </div>
+      {/* </div> */}
     </div>
   );
 };

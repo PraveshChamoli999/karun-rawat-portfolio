@@ -3,13 +3,13 @@ import { BsLinkedin, BsTwitter } from "react-icons/bs";
 
 const Hero = () => {
   return (
-    <div className="heroSection text-white profile-details">
-      <div className="bg overflow-hidden -z-10 absolute w-[100%] h-[80vh]">
+    <div className="heroSection text-white profile-details overflow-hidden h-[70vh]">
+      <div className="bg overflow-hidden -z-10 absolute w-[100%] h-[70vh]">
         <img src={require("../assets/bg1.png")} className="w-[100%]"></img>
       </div>
       <div class="container mx-auto ">
-        <div class="grid grid-cols-1 gap-3 lg:grid-cols-3">
-          <div class="grid grid-cols-1 gap-2">
+        <div class="grid grid-cols-1 gap-3 lg:grid-cols-3 ">
+          <div class="grid grid-cols-1 gap-2 mt-14">
             <div className="flex justify-center items-center">
               <img
                 src={require("../assets/karun-sir.png")}
@@ -17,11 +17,15 @@ const Hero = () => {
               ></img>
             </div>
             <div className="socials flex justify-center items-center gap-4 text-[1.5rem] my-5">
-              <BsLinkedin />
-              <BsTwitter />
+              <a href="#" target="_blank" className="hover:scale-105">
+                <BsLinkedin />
+              </a>
+              <a href="#" target="_blank" className="hover:scale-105">
+                <BsTwitter />
+              </a>
             </div>
           </div>
-          <div className="justify-center p-6 col-span-2">
+          <div className="justify-center p-6 col-span-2 mt-14">
             <h2 className="text-[2rem] font-semibold">Dr. Karun Rawat</h2>
             <div className="h-[1px] w-full bg-[#FFEC44] mt-2 mb-5"></div>
 

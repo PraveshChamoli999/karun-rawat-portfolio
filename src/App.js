@@ -1,4 +1,12 @@
-import { AboutMe, Home, NewsAndHighlights, Publications, ReasearchandTech, TeamAndMembers, TrainingAndWorkshops } from "./pages";
+import {
+  AboutMe,
+  Home,
+  NewsAndHighlights,
+  Publications,
+  ReasearchandTech,
+  TeamAndMembers,
+  TrainingAndWorkshops,
+} from "./pages";
 import { Route, Routes } from "react-router-dom";
 import { Header, Hero } from "./components";
 function App() {

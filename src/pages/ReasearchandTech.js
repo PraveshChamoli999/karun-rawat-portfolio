@@ -3,18 +3,19 @@ import React from "react";
 const ReasearchandTech = () => {
   return (
     <div>
-      <div className="research bg-[#f9f9f9] py-10 ">
-        <h2 className="text-center text-[2rem] text-[#1d466e] font-semibold mb-5">
+      <div className="research bg-[#F7F7F7] py-10 ">
+        <h2 className="text-center text-[2rem] text-[#1d466e] font-semibold mb-10">
           Research & Development
         </h2>
-        <div className="cardContainer flex flex-col shadow-md gap-2 bg-white mx-[12%] px-8 py-10 ">
-          <div className="font-light mt-7">
-            <h3 className="text-[1.5rem] font-normal text-[#1d466e]">
+        <div className="cardContainer flex flex-col shadow-md rounded-lg gap-5 bg-white mx-[10%] px-12 py-14 ">
+          <div className="font-normal text-[16px] leading-[170%] text-[#5B5B5B]">
+            <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
+              <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
               Research Area
             </h3>
-            <ul className="mt-4 list-disc pl-5 flex flex-col gap-3">
+            <ul className="mt-4 list-disc pl-5 flex flex-col gap-4 ">
               <li>
-                <h3 className="font-medium text-[#1d466e]">
+                <h3 className="font-medium text-[#1d466e] text-[1.1rem]">
                   Radio Frequency Power Amplifier Design
                 </h3>
                 <p>
@@ -24,7 +25,7 @@ const ReasearchandTech = () => {
                 </p>
               </li>
               <li>
-                <h3 className="font-medium text-[#1d466e]">
+                <h3 className="font-medium text-[#1d466e] text-[1.1rem]">
                   On-chip Power Amplifiers
                 </h3>
                 <p>
@@ -33,7 +34,7 @@ const ReasearchandTech = () => {
                 </p>
               </li>
               <li>
-                <h3 className="font-medium text-[#1d466e]">
+                <h3 className="font-medium text-[#1d466e] text-[1.1rem]">
                   Embedding System Design for Radio development
                 </h3>
                 <p>
@@ -43,7 +44,7 @@ const ReasearchandTech = () => {
                 </p>
               </li>
               <li>
-                <h3 className="font-medium text-[#1d466e]">
+                <h3 className="font-medium text-[#1d466e] text-[1.1rem]">
                   High Power Device Characterization & Modeling
                 </h3>
                 <p>
@@ -54,8 +55,9 @@ const ReasearchandTech = () => {
               </li>
             </ul>
           </div>
-          <div className="font-light mt-7">
-            <h3 className="text-[1.5rem] font-normal text-[#1d466e]">
+          <div className="font-normal text-[16px] leading-[170%] text-[#5B5B5B] mt-7">
+            <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
+              <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
               International Collaborators
             </h3>
             <ul className="mt-4 list-decimal pl-5 flex flex-col gap-3">
@@ -69,13 +71,14 @@ const ReasearchandTech = () => {
               </li>
             </ul>
           </div>
-          <div className="font-light mt-7">
-            <h3 className="text-[1.5rem] font-normal text-[#1d466e]">
+          <div className="font-normal text-[16px] leading-[170%] text-[#5B5B5B] mt-7">
+            <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
+              <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
               Research Facility
             </h3>
-            <ul className="mt-4 list-disc pl-5 flex flex-col gap-3">
+            <ul className="mt-4 list-disc pl-5 flex flex-col gap-5">
               <li>
-                <h3 className="font-medium text-[#1d466e]">
+                <h3 className="font-medium text-[#1d466e] text-[1.1rem]">
                   High Power Nonlinear Device Characterization & Modeling (GaN
                   HEMT)
                 </h3>
@@ -86,7 +89,7 @@ const ReasearchandTech = () => {
                 </p>
               </li>
               <li>
-                <h3 className="font-medium text-[#1d466e]">
+                <h3 className="font-medium text-[#1d466e] text-[1.1rem]">
                   On-Chip Characterization up to 67 GHz
                 </h3>
                 <p>
@@ -95,7 +98,7 @@ const ReasearchandTech = () => {
                 </p>
               </li>
               <li>
-                <h3 className="font-medium text-[#1d466e]">
+                <h3 className="font-medium text-[#1d466e] text-[1.1rem]">
                   Wireless Communication Test-Bedupto 6 GHz
                 </h3>
                 <p>
@@ -106,7 +109,7 @@ const ReasearchandTech = () => {
                 </p>
               </li>
               <li>
-                <h3 className="font-medium text-[#1d466e]">
+                <h3 className="font-medium text-[#1d466e] text-[1.1rem]">
                   High Power Device Characterization & Modeling
                 </h3>
                 <p>
@@ -117,22 +120,126 @@ const ReasearchandTech = () => {
               </li>
             </ul>
           </div>
-          <div className="font-light mt-7">
-            <h3 className="text-[1.7rem] font-normal text-[#1d466e]">
+          <div className="font-normal text-[16px] leading-[170%] text-[#5B5B5B] mt-7">
+            <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-2 items-center">
+              <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
               Sponsors and Projects
             </h3>
             <h3 className="text-[1.1rem] font-normal text-[#1d466e]">
               Sponsors / Industry Partners
             </h3>
-            <h3 className="text-[1.3rem] font-medium text-[#1d466e] mt-3">
+            <h3 className="text-[1.3rem] font-medium text-[#1d466e] mt-5">
               External Funding (Funds Generated)
             </h3>
-            <p className="mb-3">
+            <p className="mb-3 font-semibold">
               An overall funding of Rs. 694.75 Lacs (~ USD: 0.93 M) have been
               generated from various sponsors for research projects and
               consultancy work.
             </p>
-            <h3 className="text-[1.3rem] font-medium text-[#1d466e]">
+            <h3 className="text-[1.5rem] font-normal text-[#1d466e] flex gap-1 mt-10 mb-5 items-center">
+              <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
+              Ongoing Projects:
+            </h3>
+
+            <div class="relative overflow-x-auto sm:rounded-lg font-medium my-3">
+              <table class="w-full text-sm text-left text-gray-500 ">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+                  <tr>
+                    <th scope="col" class="px-6 py-3 ">
+                      Title
+                    </th>
+                    <th scope="col" class="px-6 py-3 w-[120px] ">
+                      Duration
+                    </th>
+                    <th scope="col" class="px-5 py-3 w-[140px] ">
+                      Sponsored By
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border-b ">
+                    <td
+                      scope="row"
+                      class="px-6 py-4 w-[500px] text-gray-900 whitespace-nowrap"
+                    >
+                      Design of Airborne Power Amplifiers for L-band and UHF
+                      frequency range.
+                    </td>
+                    <td class="px-5 py-4">2020-2022 Role: PI</td>
+                    <td class="px-6 py-4">DEAL, DRDO Government of India</td>
+                  </tr>
+                  <tr class="bg-white border-b ">
+                    <td
+                      scope="row"
+                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
+                    >
+                      Power Amplifier Design at 47 GHz using SiGeBiCMOS
+                      Technology for 5G Applications” under University
+                      Partnership Program. Partnership Program. Partnership
+                      Program. Partnership Program. Partnership Program.
+                    </td>
+                    <td class="px-5 py-4">2021-2023 Role: PI</td>
+                    <td class="px-6 py-4">Global Foundries</td>
+                  </tr>
+                  <tr class="bg-white border-b ">
+                    <td
+                      scope="row"
+                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
+                    >
+                      Wideband Gallium Nitride Based Outphasing Power Amplifier
+                      for Upcoming 5G Wireless Transmitters.
+                    </td>
+                    <td class="px-5 py-4">2019-2022 Role: PI</td>
+                    <td class="px-6 py-4">
+                      Extra Mural (SERB Government of India)
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b ">
+                    <td
+                      scope="row"
+                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
+                    >
+                      Nonlinear GaN HEMT Device Characterization for Power
+                      Amplifier Design and Implementation at X-Band frequencies.
+                    </td>
+                    <td class="px-5 py-4"> 2019-2022 Role: PI</td>
+                    <td class="px-6 py-4">
+                      ER&IPR (DRDO, Government of India)
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b ">
+                    <td
+                      scope="row"
+                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
+                    >
+                      Design & Development of Ultra-Wideband Multi-Octave
+                      Gallium Nitride Monolithic Microwave Integrated Circuit
+                      (MMIC) based Power Amplifier.
+                    </td>
+                    <td class="px-5 py-4"> 2019-2022 Role: PI</td>
+                    <td class="px-6 py-4">
+                      IMPRINT2 (DST, Government of India)
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b ">
+                    <td
+                      scope="row"
+                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
+                    >
+                      Radio Frequency Power Amplifier Design & Distortion
+                      Mitigation for Energy and Spectrum Efficient 5G Wireless
+                      Transmitters.
+                    </td>
+                    <td class="px-5 py-4"> 2019-2022 Role: PI</td>
+                    <td class="px-6 py-4">SPARC (MHRD, Government of India)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          {/* <div className="font-light mt-7">
+            <h3 className="text-[1.5rem] font-normal text-[#1d466e] flex gap-1 mt-10 mb-5 items-center">
+              <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
               Ongoing Projects:
             </h3>
             <div class="relative overflow-x-auto sm:rounded-lg font-medium my-3">
@@ -230,107 +337,7 @@ const ReasearchandTech = () => {
                 </tbody>
               </table>
             </div>
-          </div>
-          <div className="font-light mt-7">
-            <h3 className="text-[1.3rem] font-medium text-[#1d466e]">
-              Ongoing Projects:
-            </h3>
-            <div class="relative overflow-x-auto sm:rounded-lg font-medium my-3">
-              <table class="w-full text-sm text-left text-gray-500 ">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
-                  <tr>
-                    <th scope="col" class="px-6 py-3 ">
-                      Title
-                    </th>
-                    <th scope="col" class="px-6 py-3 w-[120px] ">
-                      Duration
-                    </th>
-                    <th scope="col" class="px-5 py-3 w-[140px] ">
-                      Sponsored By
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="bg-white border-b ">
-                    <td
-                      scope="row"
-                      class="px-6 py-4 w-[500px] text-gray-900 whitespace-nowrap"
-                    >
-                      Design of Airborne Power Amplifiers for L-band and UHF
-                      frequency range.
-                    </td>
-                    <td class="px-5 py-4">2020-2022 Role: PI</td>
-                    <td class="px-6 py-4">DEAL, DRDO Government of India</td>
-                  </tr>
-                  <tr class="bg-white border-b ">
-                    <td
-                      scope="row"
-                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
-                    >
-                      Power Amplifier Design at 47 GHz using SiGeBiCMOS
-                      Technology for 5G Applications” under University
-                      Partnership Program. Partnership Program. Partnership
-                      Program. Partnership Program. Partnership Program.
-                    </td>
-                    <td class="px-5 py-4">2021-2023 Role: PI</td>
-                    <td class="px-6 py-4">Global Foundries</td>
-                  </tr>
-                  <tr class="bg-white border-b ">
-                    <td
-                      scope="row"
-                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
-                    >
-                      Wideband Gallium Nitride Based Outphasing Power Amplifier
-                      for Upcoming 5G Wireless Transmitters.
-                    </td>
-                    <td class="px-5 py-4">2019-2022 Role: PI</td>
-                    <td class="px-6 py-4">
-                      Extra Mural (SERB Government of India)
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b ">
-                    <td
-                      scope="row"
-                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
-                    >
-                      Nonlinear GaN HEMT Device Characterization for Power
-                      Amplifier Design and Implementation at X-Band frequencies.
-                    </td>
-                    <td class="px-5 py-4"> 2019-2022 Role: PI</td>
-                    <td class="px-6 py-4">
-                      ER&IPR (DRDO, Government of India)
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b ">
-                    <td
-                      scope="row"
-                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
-                    >
-                      Design & Development of Ultra-Wideband Multi-Octave
-                      Gallium Nitride Monolithic Microwave Integrated Circuit
-                      (MMIC) based Power Amplifier.
-                    </td>
-                    <td class="px-5 py-4"> 2019-2022 Role: PI</td>
-                    <td class="px-6 py-4">
-                      IMPRINT2 (DST, Government of India)
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b ">
-                    <td
-                      scope="row"
-                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
-                    >
-                      Radio Frequency Power Amplifier Design & Distortion
-                      Mitigation for Energy and Spectrum Efficient 5G Wireless
-                      Transmitters.
-                    </td>
-                    <td class="px-5 py-4"> 2019-2022 Role: PI</td>
-                    <td class="px-6 py-4">SPARC (MHRD, Government of India)</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
