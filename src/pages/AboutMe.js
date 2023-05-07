@@ -3,9 +3,9 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 
 const AboutMe = () => {
   return (
-    <div className="my-7 py-20">
+    <div>
       {/* ************************Research Section ************************ */}
-      <div className="research bg-[#F7F7F7] ">
+      <div className="research bg-[#F7F7F7] py-10">
         <h2 className="text-center text-[2rem] text-[#1d466e] font-semibold mb-10">
           About Me
         </h2>

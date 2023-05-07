@@ -8,7 +8,7 @@ import {
   TrainingAndWorkshops,
 } from "./pages";
 import { Route, Routes } from "react-router-dom";
-import { Header, Hero } from "./components";
+import { Footer, Header, Hero } from "./components";
 function App() {
   return (
     <div className="App">
@@ -31,6 +31,7 @@ function App() {
         <Route path="/team-members" exact element={<TeamAndMembers />} />
         <Route path="/news-highlights" exact element={<NewsAndHighlights />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
