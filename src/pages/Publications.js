@@ -41,7 +41,7 @@ const Publications = () => {
             <Lottie options={loaderSetting} height={60} width={60} />
           </div>
         ) : (
-          <div className="cardContainer flex flex-col shadow-md rounded-lg gap-5 bg-white mx-[10%] px-12 py-14">
+          <div className="cardContainer flex flex-col shadow-md rounded-lg gap-5 bg-white lg:mx-[10%] md:mx-[10%] mx-[2%] px-12 py-14">
             {error ? (
               <div>{error}</div>
             ) : (
