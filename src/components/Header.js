@@ -1,21 +1,15 @@
 import React from "react";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-  const [isRFPowerAmp, setIsRFPowerAmp] = useState(false);
-  const [isRFPassive, setIsRFPassive] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div
-      onMouseLeave={() => setIsDropDownOpen(false)}
-      className="bg-[#02458A] text-white  "
-    >
+    <div className="bg-[#02458A] text-white  ">
       <nav className="relative   ">
         <div className="container py-3 px-6 mx-auto lg:flex lg:justify-between lg:items-center">
           <div className="flex items-center justify-between">
@@ -80,6 +74,7 @@ const Header = () => {
               <NavLink
                 className="my-2   transition-colors duration-300 transform  hover:text-[#DCDCDC]  md:mx-4 md:my-0"
                 to="/about-me"
+                onClick={() => handleClick()}
               >
                 About me
               </NavLink>
@@ -87,6 +82,7 @@ const Header = () => {
               <NavLink
                 className="my-2   transition-colors duration-300 transform  hover:text-[#DCDCDC]  md:mx-4 md:my-0"
                 to="/research-technology"
+                onClick={() => handleClick()}
               >
                 Reasearch & Tech
               </NavLink>
@@ -95,6 +91,7 @@ const Header = () => {
               <NavLink
                 className="my-2  -z-1 transition-colors duration-300 transform  hover:text-[#DCDCDC]  md:mx-4 md:my-0"
                 to="/publications"
+                onClick={() => handleClick()}
               >
                 Publications
               </NavLink>
@@ -102,6 +99,7 @@ const Header = () => {
               <NavLink
                 className="my-2  transition-colors duration-300 transform  hover:text-[#DCDCDC]  md:mx-4 md:my-0"
                 to="/training-workshops"
+                onClick={() => handleClick()}
               >
                 Training & Workshops
               </NavLink>
@@ -109,6 +107,7 @@ const Header = () => {
               <NavLink
                 className="my-2  transition-colors duration-300 transform  hover:text-[#DCDCDC]  md:mx-4 md:my-0"
                 to="/team-members"
+                onClick={() => handleClick()}
               >
                 Team & Members
               </NavLink>
@@ -116,6 +115,7 @@ const Header = () => {
               <NavLink
                 className="my-2  transition-colors duration-300 transform  hover:text-[#DCDCDC]  md:mx-4 md:my-0"
                 to="/news-highlights"
+                onClick={() => handleClick()}
               >
                 News & Highlights
               </NavLink>
