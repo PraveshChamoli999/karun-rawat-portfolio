@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div className="bg-[#02458A] text-white  ">
       <nav className="relative   ">
-        <div className="container py-3 px-3 mx-auto lg:flex lg:justify-between lg:items-center  font-semibold lg:text-[18px] text-base">
+        <div className="container py-3 px-3 mx-auto lg:flex lg:justify-between lg:items-center  ">
           <div className="flex items-center justify-between">
             <NavLink to="/" className="lg:pl-36">
               <img
