@@ -16,7 +16,7 @@ const Hero = () => {
             <div className="flex justify-center items-center">
               <img
                 src={require("../assets/karun-sir.png")}
-                className="img rounded-full w-72 h-72 mt-4"
+                className="img rounded-full w-72 h-72 mt-4 shadow-inner "
               ></img>
             </div>
             <div className="socials flex justify-center items-center gap-4 text-[1.5rem] my-5">

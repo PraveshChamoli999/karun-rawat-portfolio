@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div className="bg-[#02458A] text-white  ">
       <nav className="relative   ">
-        <div className="container py-3 px-6 mx-auto lg:flex lg:justify-between lg:items-center">
+        <div className="container py-3 px-3 mx-auto lg:flex lg:justify-between lg:items-center  font-semibold lg:text-[18px] text-base">
           <div className="flex items-center justify-between">
             <NavLink to="/" className="lg:pl-36">
               <img
@@ -70,7 +70,7 @@ const Header = () => {
                 : "opacity-0 -translate-x-full"
             }`}
           >
-            <div className="flex flex-col lg:flex-row lg:mx-6 gap-4 lg:gap-1">
+            <div className="flex flex-col lg:flex-row lg:mx-6 gap-4 lg:gap-0">
               <NavLink
                 className="my-2   transition-colors duration-300 transform  hover:text-[#DCDCDC]  md:mx-4 md:my-0"
                 to="/about-me"
