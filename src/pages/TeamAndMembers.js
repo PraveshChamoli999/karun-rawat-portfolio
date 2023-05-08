@@ -107,7 +107,7 @@ const TeamAndMembers = () => {
       <h2 className="text-center text-[2rem] text-[#1d466e] font-semibold mb-10">
         Team And Members
       </h2>
-      <div className="cardContainer flex flex-col shadow-md rounded-lg gap-5 bg-white mx-[10%] px-12 py-14">
+      <div className="cardContainer flex flex-col shadow-md rounded-lg gap-5 bg-white lg:mx-[10%] md:mx-[10%] mx-[2%] px-12 py-14">
         <div>
           <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
             <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>

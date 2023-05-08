@@ -24,7 +24,7 @@ const Home = () => {
               <h3 className="text-[1.5rem] font-semibold my-5 ">
                 Radio Frequency Active circuits
               </h3>
-              <p className="">
+              <p className="pb-5">
                 Power Amplifiers, Efficiency enhancement Doherty Power
                 Amplifiers, Chireix outphasing amplifiers, Waveform Engineering
                 (Class E/F, B/J, etc.) based Octave & Multi-octave power
@@ -46,7 +46,7 @@ const Home = () => {
               <h3 className="text-[1.5rem] font-semibold my-5 ">
                 On-chip RF Circuits
               </h3>
-              <p className="">
+              <p className="pb-5">
                 Power Amplifier Design in Gallium Nitride MMIC Design, BiCMOS RF
                 circuits with millimeter wave applications, RF mixed signal CMOS
                 design etc.
@@ -67,7 +67,7 @@ const Home = () => {
               <h3 className="text-[1.5rem] font-semibold my-5 ">
                 Embedding System Design for Radio development
               </h3>
-              <p className="">
+              <p className="pb-5">
                 Delta Sigma Modulation with Noise Shaping Filter, radio
                 functionality in wireless transmitters such as predistortion,
                 beam forming etc.
@@ -88,7 +88,7 @@ const Home = () => {
               <h3 className="text-[1.5rem] font-semibold my-5 ">
                 Radio Frequency Device Characterization & Modeling
               </h3>
-              <p className="">
+              <p className="pb-5">
                 Power Amplifiers, Efficiency enhancement Doherty Power
                 Amplifiers, Chireix outphasing amplifiers, Waveform Engineering
                 (Class E/F, B/J, etc.) based Octave & Multi-octave power
