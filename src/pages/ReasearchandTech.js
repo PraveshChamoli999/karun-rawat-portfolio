@@ -162,50 +162,11 @@ const ReasearchandTech = () => {
                       scope="row"
                       class="px-6 py-4 w-[500px] text-gray-900 whitespace-nowrap"
                     >
-                      Design of Airborne Power Amplifiers for L-band and UHF
-                      frequency range.
+                      Design of 5G Power Amplifiers Under Research Partnership
+                      Agreement with WIPRO Ltd.
                     </td>
-                    <td class="px-5 py-4">2020-2022 Role: PI</td>
-                    <td class="px-6 py-4">DEAL, DRDO Government of India</td>
-                  </tr>
-                  <tr class="bg-white border-b ">
-                    <td
-                      scope="row"
-                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
-                    >
-                      Power Amplifier Design at 47 GHz using SiGeBiCMOS
-                      Technology for 5G Applications” under University
-                      Partnership Program. Partnership Program. Partnership
-                      Program. Partnership Program. Partnership Program.
-                    </td>
-                    <td class="px-5 py-4">2021-2023 Role: PI</td>
-                    <td class="px-6 py-4">Global Foundries</td>
-                  </tr>
-                  <tr class="bg-white border-b ">
-                    <td
-                      scope="row"
-                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
-                    >
-                      Wideband Gallium Nitride Based Outphasing Power Amplifier
-                      for Upcoming 5G Wireless Transmitters.
-                    </td>
-                    <td class="px-5 py-4">2019-2022 Role: PI</td>
-                    <td class="px-6 py-4">
-                      Extra Mural (SERB Government of India)
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b ">
-                    <td
-                      scope="row"
-                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
-                    >
-                      Nonlinear GaN HEMT Device Characterization for Power
-                      Amplifier Design and Implementation at X-Band frequencies.
-                    </td>
-                    <td class="px-5 py-4"> 2019-2022 Role: PI</td>
-                    <td class="px-6 py-4">
-                      ER&IPR (DRDO, Government of India)
-                    </td>
+                    <td class="px-5 py-4">2023-2024 Role: PI</td>
+                    <td class="px-6 py-4">DEAL, WIPRO Ltd.</td>
                   </tr>
                   <tr class="bg-white border-b ">
                     <td
@@ -214,9 +175,9 @@ const ReasearchandTech = () => {
                     >
                       Design & Development of Ultra-Wideband Multi-Octave
                       Gallium Nitride Monolithic Microwave Integrated Circuit
-                      (MMIC) based Power Amplifier.
+                      (MMIC) based Power Amplifier
                     </td>
-                    <td class="px-5 py-4"> 2019-2022 Role: PI</td>
+                    <td class="px-5 py-4">2019-2023 Role: PI</td>
                     <td class="px-6 py-4">
                       IMPRINT2 (DST, Government of India)
                     </td>
@@ -228,10 +189,21 @@ const ReasearchandTech = () => {
                     >
                       Radio Frequency Power Amplifier Design & Distortion
                       Mitigation for Energy and Spectrum Efficient 5G Wireless
-                      Transmitters.
+                      Transmitters
                     </td>
-                    <td class="px-5 py-4"> 2019-2022 Role: PI</td>
+                    <td class="px-5 py-4">2019-2021 Role: PI</td>
                     <td class="px-6 py-4">SPARC (MHRD, Government of India)</td>
+                  </tr>
+                  <tr class="bg-white border-b ">
+                    <td
+                      scope="row"
+                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
+                    >
+                      Study and Design Challenges in GaN MMIC based Power
+                      Amplifier at Ku-Band
+                    </td>
+                    <td class="px-5 py-4"> 2017-2022 Role: PI</td>
+                    <td class="px-6 py-4">SSPL, DRDO, Government of India</td>
                   </tr>
                 </tbody>
               </table>
