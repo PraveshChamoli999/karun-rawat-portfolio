@@ -202,7 +202,7 @@ const ReasearchandTech = () => {
                       Study and Design Challenges in GaN MMIC based Power
                       Amplifier at Ku-Band
                     </td>
-                    <td class="px-5 py-4"> 2017-2022 Role: PI</td>
+                    <td class="px-5 py-4"> 2017-2020 Role: PI</td>
                     <td class="px-6 py-4">SSPL, DRDO, Government of India</td>
                   </tr>
                 </tbody>
