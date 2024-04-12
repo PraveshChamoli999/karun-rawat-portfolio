@@ -114,11 +114,10 @@ const AboutMe = () => {
                 publications in reputed journals and conferences.
               </li>
               <li>
-                Best Industrial Trainee Award: This was awarded by Defence
-                Research Development Organization (DRDO), India, for being a
-                best trainee during the industrial internship in Defence
-                laboratory in India as a part of curriculum of Bachelors of
-                Engineering.
+                Best Industrial Trainee Award: This was awarded by BEL Hyderabad
+                India, for being a best trainee during the industrial internship
+                in Defence laboratory in India as a part of curriculum of
+                Bachelors of Engineering.
               </li>
             </ul>
           </div>

@@ -203,7 +203,9 @@ const ReasearchandTech = () => {
                       Amplifier at Ku-Band
                     </td>
                     <td class="px-5 py-4"> 2017-2020 Role: PI</td>
-                    <td class="px-6 py-4">SSPL, DRDO, Government of India</td>
+                    <td class="px-6 py-4">
+                      BEL Hyderabad, Government of India
+                    </td>
                   </tr>
                 </tbody>
               </table>
