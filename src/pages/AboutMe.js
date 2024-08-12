@@ -18,7 +18,7 @@ const AboutMe = () => {
             <p className="mt-4 ">
               Karun Rawat has received his PhD. degree in electrical engineering
               from University of Calgary, Canada in 2012. He is currently
-              working as Associate Professor in department of Electronics and
+              working as Professor in department of Electronics and
               Communication at Indian Institute of Technology (I.I.T) Roorkee,
               India. Prior to this, he was Assistant Professor in Centre for
               Applied Research in Electronics, I.I.T Delhi from 2013-2014 and
@@ -79,7 +79,7 @@ const AboutMe = () => {
             <p className="mt-4">
               Karun Rawat has received his PhD. degree in electrical engineering
               from University of Calgary, Canada in 2012. He is currently
-              working as Associate Professor in department of Electronics and
+              working as Professor in department of Electronics and
               Communication at Indian Institute of Technology (I.I.T) Roorkee,
               India. Prior to this, he was Assistant Professor in Centre for
               Applied Research in Electronics, I.I.T Delhi from 2013-2014 and

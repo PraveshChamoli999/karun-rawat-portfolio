@@ -37,7 +37,7 @@ const Hero = () => {
             <div className="grid grid-cols-1 gap-2 md:grid-cols-3 text-[#5B5B5B] lg:text-white">
               <div className="col-span-2 pr-6">
                 <p>
-                  Associate Professor (Outstanding Young Faculty) Department of
+                  Professor (Outstanding Young Faculty) Department of
                   Electronics & Communication, Indian Institute of Technology
                   (I.I.T) Roorkee, India.
                 </p>
