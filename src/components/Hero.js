@@ -15,7 +15,7 @@ const Hero = () => {
           <div class="grid grid-cols-1 gap-2 mt-14">
             <div className="flex justify-center items-center">
               <img
-                src={require("../assets/karun.jpeg")}
+                src={require("../assets/karun-sir.png")}
                 className="img rounded-full w-72 h-72 mt-4 shadow-inner "
               ></img>
             </div>
