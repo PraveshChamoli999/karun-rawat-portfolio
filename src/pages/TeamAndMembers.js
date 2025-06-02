@@ -2,6 +2,7 @@ import React from "react";
 
 const TeamAndMembers = () => {
   const mtechSupervisions = [
+    "Manmathesh Mishra, “ Design of A 47 GHz Power Amplifier in A 130 nm SiGe BiCMOS8XP Process Technology”, Graduation: 2023.",
     "Amit placed in GalaxEye Space Pvt. Ltd. (RF design Engineer) 2021 Graduated",
     "Shruti Shikha placed in Qualcomm (Bluetooth Developer) 2021 Graduated",
     "Rohit Gupta, “Enclosure effect on Microwave Power Amplifier”, Graduation: 2020.",
