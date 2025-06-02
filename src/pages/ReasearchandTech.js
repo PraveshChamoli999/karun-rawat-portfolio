@@ -157,56 +157,78 @@ const ReasearchandTech = () => {
                   </tr>
                 </thead>
                 <tbody>
+                  {/* new data start */}
                   <tr class="bg-white border-b ">
                     <td
                       scope="row"
-                      class="px-6 py-4 w-[500px] text-gray-900 whitespace-nowrap"
+                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
                     >
-                      Design of 5G Power Amplifiers Under Research Partnership
-                      Agreement with WIPRO Ltd.
+                      Development of high-efficiency C-Band Power Amplifier
+                      Units
                     </td>
-                    <td class="px-5 py-4">2023-2024 Role: PI</td>
-                    <td class="px-6 py-4">DEAL, WIPRO Ltd.</td>
+                    <td class="px-5 py-4">2024-2026 Role: PI</td>
+                    <td class="px-6 py-4">DEAL, DRDO, Dehradun</td>
                   </tr>
                   <tr class="bg-white border-b ">
                     <td
                       scope="row"
                       class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
                     >
-                      Design & Development of Ultra-Wideband Multi-Octave
-                      Gallium Nitride Monolithic Microwave Integrated Circuit
-                      (MMIC) based Power Amplifier
+                      Development of On-Demand Single Photon Emitters, Single
+                      Photon Avalanche Detectors, High -Frequency Devices Units
                     </td>
-                    <td class="px-5 py-4">2019-2023 Role: PI</td>
+                    <td class="px-5 py-4">2025-2030 Role: PI</td>
                     <td class="px-6 py-4">
-                      IMPRINT2 (DST, Government of India)
+                      QMD Foundation, National Quantum Mission (DST)
                     </td>
                   </tr>
+
                   <tr class="bg-white border-b ">
                     <td
                       scope="row"
                       class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
                     >
-                      Radio Frequency Power Amplifier Design & Distortion
-                      Mitigation for Energy and Spectrum Efficient 5G Wireless
-                      Transmitters
+                      Development of digital predistortion technique for
+                      linearization of high-power amplifier in VHF/UHF
                     </td>
-                    <td class="px-5 py-4">2019-2021 Role: PI</td>
-                    <td class="px-6 py-4">SPARC (MHRD, Government of India)</td>
+                    <td class="px-5 py-4">2023-2026 Role: PI</td>
+                    <td class="px-6 py-4">BARC, DAE, (Government of India)</td>
                   </tr>
+
                   <tr class="bg-white border-b ">
                     <td
                       scope="row"
                       class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
                     >
-                      Study and Design Challenges in GaN MMIC based Power
-                      Amplifier at Ku-Band
+                      Design and Development of New Prototype for RIS-aided
+                      Communication
                     </td>
-                    <td class="px-5 py-4"> 2017-2020 Role: PI</td>
-                    <td class="px-6 py-4">
-                      BEL Hyderabad, Government of India
-                    </td>
+                    <td class="px-5 py-4">2022-2026 Role: CI</td>
+                    <td class="px-6 py-4">IIITB COMET Foundation</td>
                   </tr>
+
+                  <tr class="bg-white border-b ">
+                    <td
+                      scope="row"
+                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
+                    >
+                      AI for Sanskrit, Uttarakhand Sanskrit University
+                    </td>
+                    <td class="px-5 py-4">2022-2026 Role: CI</td>
+                    <td class="px-6 py-4">Govt. of Uttarakhands</td>
+                  </tr>
+
+                  <tr class="bg-white border-b ">
+                    <td
+                      scope="row"
+                      class="px-6 py-4 w-[500px]  text-gray-900 whitespace-wrap"
+                    >
+                      National Centre for Honey Authentication and Food Safety
+                    </td>
+                    <td class="px-5 py-4">2024-2026 Role: CI</td>
+                    <td class="px-6 py-4">Dept. Hydrology, I.I.T Roorkee</td>
+                  </tr>
+                  {/* new data end */}
                 </tbody>
               </table>
             </div>
