@@ -2,6 +2,7 @@ import React from "react";
 
 const TeamAndMembers = () => {
   const mtechSupervisions = [
+    "Anshul Pandey, “A 6-bit 65 nm CMOS Active Phase Shifter in Ku Band for Analog Beamforming Application”, Graduation: 2025.",
     "Manmathesh Mishra, “ Design of A 47 GHz Power Amplifier in A 130 nm SiGe BiCMOS8XP Process Technology”, Graduation: 2023.",
     "Amit placed in GalaxEye Space Pvt. Ltd. (RF design Engineer) 2021 Graduated",
     "Shruti Shikha placed in Qualcomm (Bluetooth Developer) 2021 Graduated",
