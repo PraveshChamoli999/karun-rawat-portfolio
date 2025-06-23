@@ -21,6 +21,50 @@ const TeamAndMembers = () => {
     "Girish Kumar Ajmera, “Design of High Efficiency Multi-Standard Multi-Stage Doherty Power Amplifier”, Graduation: 2014.",
   ];
 
+  const phdSupervisionsCompleted = [
+    "Anuj Kumar Sahoo, “Multi-Port Networks For RF Measurement and Wideband Transmitter Design”, Graduation: 2023.",
+
+    "Nishant Kumar, “Delta Sigma Modulation Based Digital Transmitter For Upcoming Wireless Communication”, Graduation: 2021.",
+
+    "Y.M. AshaLatha, “Waveform Engineering Inspired Power Amplifiers for Wideband Applications ”, Graduation: 2021.",
+
+    "E. Aggrawal, “Wideband Continuous Mode Power Amplifiers for Outphasing Wireless Transmitters”, Graduation: 2021.",
+
+    "H. K. Singhal, “Multi-Octave Transmitter Design With Filter-Less Harmonic Suppression Schemes For Power Amplifiers ”, Graduation: 2020.",
+
+    "Sujata Ghosh, “Bandwidth and back-off enhancement in Doherty Power Amplifier”, Graduation: 2020.",
+
+    "C. Pathak, “Characterization & Mitigation of Linear & Non-Linear Distortions in Six-Port Modulator”, Graduation: 2019.",
+
+    "A. Barthwal, “Bandwidth and Dynamic Range Extension of Load Modulation in Doherty PA Architecture”, Graduation: 2019.",
+
+    "R. Kalyan, “Reconfigurable Concurrent Multi-band Doherty Power Amplifier”, Graduation: 2017.",
+  ];
+
+  const phdSupervisionsOngoing = [
+    "Ahmad Zakaria, “RF Packaging & Thermal Design for High Power Amplifiers”",
+
+    "Ashish Jindal, “Broadband Transmit/Receive Front end functional block using GaN HEMT Technology”",
+
+    "Avinash Singh, “Design and Analysis of Wideband and Linearized Transmitter  in Multi-Chip Module.”",
+
+    "Reddy Chaitanya, “Power Amplifier Design in SiGe Bi-CMOS Technology”",
+
+    "B. Ganesh Pandurang, “GaN HEMT Device Characterization Modelling and MMIC Design”",
+
+    "Amrit Kumar Panigrahi, “Wireless Radio Design in Embedded Platform”",
+
+    "Kamini Singh, “Power amplifier with high Spectral & Power efficiency for Wireless Communication in CMOS RFIC Technology”",
+
+    "Tarun Kumar Surethiya, “Power amplifier Design using CMOS RFIC Technology”",
+
+    "Nupur Sood, “High Efficiency & Linearized Power Amplifier Module Design”",
+
+    "Amit Singh, “Nupur Sood, “High Efficiency & Linearized Power Amplifier Module Design”",
+
+    "Ahmad Zakaria Ahmad, “Wideband RF Power Amplifier with Non Linear Device Model Embedding”",
+  ];
+
   const placements = [
     [
       "Nishant Kumar",
@@ -111,6 +155,36 @@ const TeamAndMembers = () => {
       </h2>
       <div className="cardContainer flex flex-col shadow-md rounded-lg gap-5 bg-white lg:mx-[10%] md:mx-[10%] mx-[2%] px-12 py-14">
         <div>
+          <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
+            <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
+            PhD Supervision - Ongoing
+          </h3>
+          <ul className="mt-4 list-disc pl-5 flex flex-col gap-4">
+            {phdSupervisionsOngoing.map((phdSupervision, index) => (
+              <li key={index}>
+                <div key={index} className="px-3 py-1">
+                  {phdSupervision}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>{" "}
+        <div className="mt-10">
+          <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
+            <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
+            PhD Supervision - Completed
+          </h3>
+          <ul className="mt-4 list-disc pl-5 flex flex-col gap-4">
+            {phdSupervisionsCompleted.map((phdSupervision, index) => (
+              <li key={index}>
+                <div key={index} className="px-3 py-1">
+                  {phdSupervision}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="mt-10">
           <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
             <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
             M.Tech. Supervision
