@@ -1,159 +1,287 @@
-import React from "react";
-import { HiOutlineExternalLink } from "react-icons/hi";
+import React, { useState, useEffect } from "react";
+import { ExternalLink, BookOpen, Award, Users, Briefcase } from "lucide-react";
+import Lottie from "react-lottie";
+import Loader from "../assets/loader.json";
+import amptech_logo from "../assets/Home/amptech_logo.png";
+
 
 const AboutMe = () => {
+  const [activeSection, setActiveSection] = useState('biography');
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+  const [isLoader, setIsLoader] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    // Simulate data loading
+    const timer = setTimeout(() => {
+      setIsLoader(false);
+      setIsHeaderVisible(true);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const loaderSetting = {
+    loop: true,
+    autoplay: true,
+    animationData: Loader,
+  };
+
+const sections = [
+  { id: 'biography', label: 'Biography', icon: <BookOpen size={18} /> },
+  { id: 'awards', label: 'Honour & Awards', icon: <Award size={18} /> },
+  { id: 'memberships', label: 'Memberships', icon: <Users size={18} /> },
+  { id: 'affiliations', label: 'leadership', icon: <Briefcase size={18} /> },
+ 
+];
+
+  // Styled content item component
+  const ContentItem = ({ title, description, meta, type, index }) => (
+    <div className={`group flex items-start gap-4 p-4 hover:bg-gradient-to-r from-blue-50 to-white rounded-lg transition-all duration-300 border ${
+      type === 'award' ? 'border-green-100' : 
+      type === 'membership' ? 'border-purple-100' : 
+      type === 'affiliation' ? 'border-orange-100' : 
+      'border-blue-100'
+    }`}>
+      <div className="flex-shrink-0 mt-1">
+        {type === 'award' && <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600"><Award size={16} /></div>}
+        {type === 'membership' && <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-600"><Users size={16} /></div>}
+        {type === 'affiliation' && <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center text-orange-600"><Briefcase size={16} /></div>}
+        {!type && <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">{index + 1}</div>}
+      </div>
+      <div className="flex-grow">
+        <h3 className="text-gray-800 group-hover:text-blue-700 transition-colors duration-300 font-medium">
+          {title}
+        </h3>
+        <p className="text-gray-600 text-sm mt-1">{description}</p>
+        {meta && <p className="text-xs text-gray-500 mt-2">{meta}</p>}
+      </div>
+    </div>
+  );
+
   return (
-    <div>
-      {/* ************************Research Section ************************ */}
-      <div className="research bg-[#F7F7F7] py-10">
-        <h2 className="text-center text-[2rem] text-[#1d466e] font-semibold mb-10">
-          About Me
-        </h2>
-        <div className="cardContainer flex flex-col shadow-md rounded-lg gap-5 bg-white lg:mx-[10%] md:[10%] mx-[2%] px-12 py-14 ">
-          <div className=" font-normal text-[16px] leading-[170%] text-[#5B5B5B]">
-            <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
-              <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
-              Biography
-            </h3>
-            <p className="mt-4 ">
-              Karun Rawat has received his PhD. degree in electrical engineering
-              from University of Calgary, Canada in 2012. He is currently
-              working as Professor in department of Electronics and
-              Communication at Indian Institute of Technology (I.I.T) Roorkee,
-              India. Prior to this, he was Assistant Professor in Centre for
-              Applied Research in Electronics, I.I.T Delhi from 2013-2014 and
-              scientist in the Space Applications Center, Indian Space Research
-              Organization Ahmedabad, from 2003–2007.
-            </p>
-            <p className="mt-4">
-              Karun Rawat is Senior member of IEEE since 2012 and his research
-              has resulted in more than 60 publications in journals and
-              conferences, two patents (applied), two state of art books and a
-              book chapter. He is founding director of Linear amp-tech
-              technology private limited which is involved in indigenous
-              development of power amplifier design and its linearization
-              technology.
-            </p>
-            <p className="mt-4">
-              His current research interests are in the areas of RF power
-              amplifier and transceiver design, digital transmitters, nonlinear
-              device modeling, RF linear and nonlinear measurements and
-              characterization, RF active and passive circuits design, RF CMOS
-              and GaN MMIC designs. He has given several technical talks in
-              India as well as abroad including workshops in power amplifiers at
-              EuMC 2018 (Spain), IEEE IMS 2018 (USA), IEEE ARFTG 2016 (USA),
-              IEEE APMC 2015 (China), IEEE IMaRC 2014-2015 (India), IEEE IMS
-              (USA), IEEE EuMW (Spain) etc. He has presented papers in reputed
-              conferences such as IEEE International Wireless Symposium 2019 in
-              China, European Microwave Conference in Germany, International
-              Symposium on Circuit and System, USA. Dr. Rawat has been reviewer
-              of several IEEE transactions including Transactions on Microwave
-              Theory and Techniques, Transactions on circuit and systems,
-              Transactions on Electronic Devices, Transactions on Industrial
-              Electronics etc.
-            </p>
-            <p className="mt-4">
-              Dr. Rawat has received research production award for three
-              consecutive years from 2009-2011 during his PhD. He also received
-              best design prize in 3rd Annual Smart Radio Challenge in 2010. He
-              is also member of the editorial board of Wiley journal in RF and
-              Microwave Computer Aided Engineering (RFMiCAE). He is active
-              member of Special Interest Group in Microwave and Wireless
-              Education (SiGMaWe) of IEEE Microwave Theory and Technique (MTT)
-              and Nonlinear Vector Network Analyzer Forum supported by ARFTG.
-            </p>
-            <p className="mt-4">
-              He has also been associated with advisory committee of several RF
-              industries, national laboratories and universities for
-              brainstorming and research initiatives. He has also been part of
-              technical program committee of several IEEE conferences such as
-              IEEE IMaRC, IEEE APMC and IEEE INDICON. He has served as technical
-              program chair of IEEE INDICON 2017.
-            </p>
-          </div>
-          <div className="font-normal text-[16px] leading-[170%] text-[#5C5C5C] mt-7">
-            <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
-              <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
-              Awards
-            </h3>
-            <p className="mt-4">
-              Karun Rawat has received his PhD. degree in electrical engineering
-              from University of Calgary, Canada in 2012. He is currently
-              working as Professor in department of Electronics and
-              Communication at Indian Institute of Technology (I.I.T) Roorkee,
-              India. Prior to this, he was Assistant Professor in Centre for
-              Applied Research in Electronics, I.I.T Delhi from 2013-2014 and
-              scientist in the Space Applications Center, Indian Space Research
-              Organization Ahmedabad, from 2003–2007.
-            </p>
-            <ul className="mt-4 list-disc pl-5 flex flex-col gap-3">
-              <li>
-                Received “Outstanding Young Faculty” award in IIT Roorkee for
-                the year 2020.
-              </li>
-              <li>
-                NASI Scopus Young Scientists Awards 2019 (Finalist) under
-                category: “Innovation in Engineering and Physical Sciences”.
-              </li>
-              <li>
-                First Team Prize and Best Design Price in 3rd Annual Smart Radio
-                Challenge: Team leader of the University of Calgary team, won
-                first prize and best design prize in 3rd Annual Smart Radio
-                Challenge 2010, conducted by Wireless Innovation Forum. This was
-                a worldwide championship in which student engineering teams
-                design, develop and test software defined and cognitive radio
-                technologies that address specific problems relevant to the
-                advanced wireless community. The main technical role in the
-                project was proposing system architecture, its hardware
-                development and measurement.
-              </li>
-              <li>
-                Research Production Award: This was awarded for three
-                consecutive years (2009, 2010, 2011) by the department of
-                Electrical Engineering, University of Calgary for high number of
-                publications in reputed journals and conferences.
-              </li>
-              <li>
-                Best Industrial Trainee Award: This was awarded by BEL Hyderabad
-                India, for being a best trainee during the industrial internship
-                in Defence laboratory in India as a part of curriculum of
-                Bachelors of Engineering.
-              </li>
-            </ul>
-          </div>
-          <div className="font-normal text-[16px] leading-[170%] text-[#5C5C5C] mt-7">
-            <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
-              <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
-              Memberships
-            </h3>
-            <ul className="mt-4 list-decimal pl-5 flex flex-col gap-3">
-              <li>
-                Member Technical Committee MTT-12: Microwave High Power
-                Techniques
-              </li>
-              <li>Senior Member IEEE</li>
-              <li>
-                Member MTT Special Interest Group in Microwave and Wireless
-                Education.
-              </li>
-              <li>Member, IEEE MTT, IEEE COMSOC, IEEE EDS.</li>
-              <li>Member NVNA Forum, USA.</li>
-              <li>Chapter Chair, IEEE Communication Society Chapter</li>
-            </ul>
-          </div>
-          <div className="font-normal text-[16px] leading-[170%] text-[#5C5C5C] mt-7">
-            <h3 className="text-[1.8rem] font-normal text-[#1d466e] flex gap-1 mb-5 items-center">
-              <span className="w-1 h-[27px] bg-slate-600 inline-block"></span>
-              Affiliations
-            </h3>
-            <a
-              href="https://linear-amptech.com/"
-              target="_blank"
-              className="mt-4 text-blue-900 flex items-center gap-1 underline"
+    <div id="main-content" className="min-h-screen bg-gradient-to-b from-white to-blue-50">
+      {/* Animated Header */}
+      <div className="pt-24 pb-12">
+        <div className="text-center">
+
+ <div className="inline-block">
+        <h1 
+          className={`
+            text-4xl md:text-6xl font-bold text-transparent bg-clip-text 
+            bg-gradient-to-r from-teal-600 to-blue-500 mb-4 pb-2
+            transition-all duration-1000 ease-out cursor-pointer
+            ${isHeaderVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
+            ${isHovered ? "scale-105 from-teal-500 to-blue-400" : ""}
+          `}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          Professional Profile
+        </h1>
+        
+        {/* Subtle underline effect */}
+        <div className={`
+          h-1 bg-gradient-to-r from-teal-600 to-blue-500 
+          transition-all duration-500 ease-out mt-2
+          ${isHovered ? "w-full opacity-100" : "w-0 opacity-0"}
+        `} />
+      </div>
+  
+          <p className={`text-lg text-gray-600 max-w-2xl mx-auto mb-6 transition-all duration-1000 delay-150 ${
+            isHeaderVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
+            Professional journey, achievements, and affiliations
+          </p>
+          <div className={`w-24 h-1 bg-gradient-to-r from-blue-400 to-teal-400 mx-auto rounded-full transition-all duration-1000 delay-300 ${
+            isHeaderVisible ? 'opacity-100 w-24' : 'opacity-0 w-0'
+          }`}></div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Navigation */}
+        <div className="flex flex-wrap justify-center gap-1 mb-12 bg-white rounded-xl p-1 shadow-md border border-blue-50">
+          {sections.map((section) => (
+            <button
+              key={section.id}
+              onClick={() => setActiveSection(section.id)}
+              className={`px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm font-medium ${
+                activeSection === section.id
+                  ? 'bg-gradient-to-br from-blue-600 to-blue-500 text-white shadow-md'
+                  : 'text-gray-600 hover:text-blue-700 hover:bg-blue-50'
+              }`}
             >
-              IITR, Linear Amptech <HiOutlineExternalLink />
-            </a>
-          </div>
+              {section.icon}
+              {section.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Main Content */}
+        <div className="bg-white rounded-2xl shadow-md border border-blue-100 overflow-hidden mb-16">
+          {isLoader ? (
+            <div className="flex justify-center p-12">
+              <Lottie options={loaderSetting} height={120} width={120} />
+            </div>
+          ) : (
+            <>
+              {/* Biography Section */}
+              <div className={`transition-all duration-500 ease-in-out ${activeSection === 'biography' ? 'opacity-100 p-6 md:p-8' : 'opacity-0 max-h-0 overflow-hidden'}`}>
+                <div className="flex items-center gap-4 mb-6 pb-4 border-b border-blue-100">
+                  <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-400 rounded-full"></div>
+                  <h2 className="text-2xl font-bold text-gray-800">Professional Biography</h2>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
+                    <p className="text-lg text-gray-800 mb-2">
+                      <span className="font-semibold text-blue-900">Dr. Karun Rawat</span> is a Professor in the Department of Electronics and Communication at the Indian Institute of Technology (IIT) Roorkee, India.
+                    </p>
+                    <p className="text-sm text-blue-700">PhD in Electrical Engineering, University of Calgary, Canada (2012)</p>
+                  </div>
+                  
+                  <ContentItem
+                    title="Academic Journey"
+                    description="His academic journey includes serving as an Assistant Professor at the Centre for Applied Research in Electronics, IIT Delhi (2013-2014), and working as a scientist at the Space Applications Center, Indian Space Research Organization, Ahmedabad (2003–2007)."
+                    type="academic-journey"
+                  />
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <ContentItem
+                      title="Research Impact"
+                      description="60+ publications, 2 patents, authored books and chapters"
+                      type="award"
+                    />
+                    <ContentItem
+                      title="Industry Leadership"
+                      description="Founding Director, Linear amp-tech technology pvt. ltd."
+                      type="affiliation"
+                    />
+                  </div>
+                  
+                  <ContentItem
+                    title="Research Focus"
+                    description="As a Senior IEEE member since 2012, his research interests span RF power amplifier design, digital transmitters, nonlinear device modeling, and RF CMOS and GaN MMIC designs. He has delivered technical talks globally at prestigious conferences including EuMC, IEEE IMS, and IEEE ARFTG."
+                   type="research-focus"
+                  />
+                  
+                  <ContentItem
+                    title="Professional Service"
+                    description="Dr. Rawat serves as a reviewer for several IEEE transactions and is a member of the editorial board of Wiley journal in RF and Microwave Computer Aided Engineering. He has contributed to advisory committees of RF industries, national laboratories, and universities, and served as technical program chair for IEEE INDICON 2017."
+                    type = "professional-service"
+                  />
+                </div>
+              </div>
+
+              {/* Awards Section */}
+              <div className={`transition-all duration-500 ease-in-out ${activeSection === 'awards' ? 'opacity-100 p-6 md:p-8' : 'opacity-0 max-h-0 overflow-hidden'}`}>
+                <div className="flex items-center gap-4 mb-6 pb-4 border-b border-blue-100">
+                  <div className="w-2 h-8 bg-gradient-to-b from-green-500 to-green-400 rounded-full"></div>
+                  <h2 className="text-2xl font-bold text-gray-800">Awards & Recognition</h2>
+                </div>
+                
+                <div className="space-y-4">
+                  {[
+                    {
+                      title: "Outstanding Young Faculty Award",
+                      description: "IIT Roorkee",
+                      meta: "2020"
+                    },
+                    {
+                      title: "NASI Scopus Young Scientists Awards (Finalist)",
+                      description: "Innovation in Engineering and Physical Sciences",
+                      meta: "2019"
+                    },
+                    {
+                      title: "Smart Radio Challenge - First Prize & Best Design",
+                      description: "Wireless Innovation Forum (Worldwide Championship)",
+                      meta: "2010"
+                    },
+                    {
+                      title: "Research Production Award",
+                      description: "University of Calgary",
+                      meta: "2009-2011 (Three consecutive years)"
+                    },
+                    {
+                      title: "Best Industrial Trainee Award",
+                      description: "BEL Hyderabad, India",
+                      meta: "B.E. Program"
+                    }
+                  ].map((item, index) => (
+                    <ContentItem
+                      key={index}
+                      title={item.title}
+                      description={item.description}
+                      meta={item.meta}
+                      type="award"
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Memberships Section */}
+              <div className={`transition-all duration-500 ease-in-out ${activeSection === 'memberships' ? 'opacity-100 p-6 md:p-8' : 'opacity-0 max-h-0 overflow-hidden'}`}>
+                <div className="flex items-center gap-4 mb-6 pb-4 border-b border-blue-100">
+                  <div className="w-2 h-8 bg-gradient-to-b from-purple-500 to-purple-400 rounded-full"></div>
+                  <h2 className="text-2xl font-bold text-gray-800">Professional Organization</h2>
+                </div>
+                
+                <div className="space-y-4">
+                  {[
+                    "Member Technical Committee MTT-12: Microwave High Power Techniques",
+                    "Senior Member IEEE",
+                    "Member MTT Special Interest Group in Microwave and Wireless Education",
+                    "Member, IEEE MTT, IEEE COMSOC, IEEE EDS",
+                    "Member NVNA Forum, USA",
+                    "Chapter Chair, IEEE Communication Society Chapter"
+                  ].map((item, index) => (
+                    <ContentItem
+                      key={index}
+                      title={item}
+                      type="membership"
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Affiliations Section */}
+              <div className={`transition-all duration-500 ease-in-out ${activeSection === 'affiliations' ? 'opacity-100 p-6 md:p-8' : 'opacity-0 max-h-0 overflow-hidden'}`}>
+                <div className="flex items-center gap-4 mb-6 pb-4 border-b border-blue-100">
+                  <div className="w-2 h-8 bg-gradient-to-b from-orange-500 to-orange-400 rounded-full"></div>
+                  <h2 className="text-2xl font-bold text-gray-800">Professional Leadership</h2>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-400">
+<a
+  href="https://linear-amptech.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-3 text-lg font-medium text-orange-800 hover:text-orange-900 transition-colors duration-200"
+>
+  <img
+    src={amptech_logo}
+    alt="Linear Amptech Logo"
+    className="w-10 h-10 rounded-lg object-contain bg-orange-100 p-1"
+  />
+  <span>Linear Amptech</span>
+  <ExternalLink size={16} />
+</a>
+
+                    <p className="text-gray-600 mt-4 ml-13">
+                      Founding Director of Linear amp-tech technology private limited, specializing in indigenous development of power amplifier design and linearization technology.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+
+        {/* Footer Note */}
+        <div className="text-center text-gray-500 text-sm pb-8">
+          <p>For more information, please contact our office.</p>
         </div>
       </div>
     </div>
