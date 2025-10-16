@@ -6,6 +6,15 @@ import ahmed_zakaria_photo from "../assets/TeamAndMemebers/ahmad_zakaria_ahmad.j
 import abdul_shukoor_photo from "../assets/TeamAndMemebers/Abdul shukoor.jpeg";
 import Adity_photo from "../assets/TeamAndMemebers/photo aditya.jpg";
 import Avinash_photo from "../assets/TeamAndMemebers/Avinash_photo.png";
+import manish_singh_photo from "../assets/TeamAndMemebers/manish_singh_photo.jpeg";
+import ShankhRaj_photo from "../assets/TeamAndMemebers/ShankhRaj_photo.jpeg";
+import Pravesh_photo from "../assets/TeamAndMemebers/Pravesh_photo.jpeg";
+import Nitin_photo from "../assets/TeamAndMemebers/Nitin_photo.jpeg";
+import kamini_photo from "../assets/TeamAndMemebers/Kamini_photo.png";
+import amrit_photo from "../assets/TeamAndMemebers/amrit_photo.jfif";
+import Amit_singh_photo from "../assets/TeamAndMemebers/amit_sing_photo.jfif";
+
+
 
 const TeamAndMembers = () => {
   const postDocStudents = [
@@ -17,7 +26,7 @@ const TeamAndMembers = () => {
     },
     {
       name: "Dr. Manish Singh",
-      photo: null,
+      photo: manish_singh_photo,
       linkedin: "https://www.linkedin.com/in/manish-singh-iiit/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       researchArea: "mm-Wave Front-end Designer (5G/6G, Antenna Design, MMIC PA/LNA, mm-Wave Frequency RF Transitions, Metamaterial/Metasurface, FSS, Absorbers, PA Linearization Techniques, Additive manufacturing.)"
     },
@@ -51,13 +60,13 @@ const TeamAndMembers = () => {
     {
       name: "Amrit Kumar Panigrahi",
       topic: "Wireless Radio Design in Embedded Platform",
-      photo: "https://media.licdn.com/dms/image/v2/C5603AQENxOE2E_JNog/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1648282267195?e=1757548800&v=beta&t=HZxuriZx_PgDE4t4d9CCrO2JnLPAHJC6VBXXKm15EXU",
+      photo: amrit_photo,
       linkedin: "https://www.linkedin.com/in/amrit-kumar-panigrahi-2646a4101/overlay/photo/"
     },
     {
       name: "Kamini Singh",
       topic: "Power amplifier with high Spectral & Power efficiency for Wireless Communication in CMOS RFIC Technology",
-      photo: "https://media.licdn.com/dms/image/v2/D4D03AQETftXFuIXQow/profile-displayphoto-crop_800_800/B4DZhpwqTrHsAI-/0/1754121021299?e=1757548800&v=beta&t=92buElascU_yowYOGDYQZ8VSespWD90vJZ10cMgXsTk",
+      photo: kamini_photo,
       linkedin: "https://www.linkedin.com/in/kamini-singh-b181a56b/"
     },
     {
@@ -75,7 +84,7 @@ const TeamAndMembers = () => {
     {
       name: "Amit Singh",
       topic: "High Efficiency & Linearized Power Amplifier Module Design",
-      photo: "https://media.licdn.com/dms/image/v2/C4D03AQG5xzAPpp0sFA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1603563451783?e=1757548800&v=beta&t=y79d6gsfr1FOG_PzCPWmjL4NNAdXLovzIHYeSdH8b1k",
+      photo: Amit_singh_photo,
       linkedin: "https://www.linkedin.com/in/amitsinghrf/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
     {
@@ -123,29 +132,32 @@ const TeamAndMembers = () => {
     {
       name: "Pravesh",
       role: "Technical Support",
-      photo: null,
+      photo: Pravesh_photo,
       linkedin: null
     },
     {
       name: "Shankraj",
       role: "Administrative Support",
-      photo: null,
+      photo: ShankhRaj_photo,
       linkedin: null
     },
     {
       name: "Nitin",
       role: "Administrative Support", 
-      photo: null,
+      photo: Nitin_photo,
       linkedin: null
     }
   ];
 
   const placements = [
-    ["Nishant Kumar", "PhD, 2021", "IIT Roorkee", "Preplced as Principle Engg. Design Enablement Texas Instruments (TI) Bangalore, India"],
+    ["Avinash Singh", "PhD, Ongoing", "IIT Roorkee", "Placed at Global Foundries, Bangalore, India"],
+    ["Reddy Chaitanya", "PhD, Ongoing", "IIT Roorkee", "Placed at Broadcom, Bangalore, India"],
+    ["B. Ganesh Pandurang", "PhD, Ongoing", "IIT Roorkee", "Placed at Intel, Bangalore, India"],
+    ["Nishant Kumar", "PhD, 2021", "IIT Roorkee", "Principle Engg. Design Enablement Texas Instruments (TI), Bangalore, India"],
     ["Y. Mary Asha Latha", "PhD, 2021", "IIT Roorkee", "Asst. Prof, IIT(ISM) Dhanbad"],
     ["Ekta Aggrawal", "PhD, 2021", "IIT Roorkee", "Placed at IISC Bangalore"],
     ["Sujata Ghosh", "PhD, 2020", "IIT Roorkee", "Global Foundries, Bengaluru"],
-    ["Hemant Kumar Singhal", "PhD, 2020", "IIT Roorkee", "Asst. Prof, NIT Uttarakhand"],
+    ["Hemant Kumar Singhal", "PhD, 2020", "IIT Roorkee", "Staff Engineer ,Axiro Semiconductor, Bengaluru"],
     ["Chetan Pathak", "PhD, 2019", "IIT Roorkee", "Asst. Prof, RJIT, Gwalior"],
     ["Ayushi Barthwal", "PhD, 2018", "IIT Delhi", "Asst. Prof, JNU, New Delhi"],
     ["Robin Kalyan", "PhD, 2017", "IIT Delhi", "Scientist, A*STAR Singapore (Former Employee ISRO)"],
@@ -322,25 +334,39 @@ const TeamAndMembers = () => {
         </div>
 
         {/* Administrative and Technical Team Section */}
-        <div className="bg-gradient-to-r from-gray-50 to-slate-50 rounded-xl p-6 border border-gray-200">
-          <h3 className="text-3xl font-bold text-[#1d466e] flex gap-3 mb-6 items-center">
-            <span className="w-1 h-8 bg-gradient-to-b from-slate-500 to-slate-700 inline-block rounded"></span>
-            Administrative and Technical Team
+                  <h3 className="text-3xl font-bold text-[#1d466e] flex gap-3 mb-6 items-center">
+            <span className="w-1 h-8 bg-gradient-to-b from-blue-500 to-blue-700 inline-block rounded"></span>
+            Admin and Technical Team
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {adminTechnicalTeam.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="w-20 h-20 rounded-full mx-auto mb-4 bg-gradient-to-br from-slate-500 to-slate-700 flex items-center justify-center shadow-lg">
-                  <span className="text-white text-xl font-bold">
-                    {member.name.charAt(0)}
-                  </span>
-                </div>
-                <h5 className="font-bold text-lg text-[#1d466e] mb-2">{member.name}</h5>
-                <p className="text-sm text-slate-600 font-semibold bg-slate-100 px-3 py-1 rounded-full inline-block">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {adminTechnicalTeam.map((member, index) => (
+    <div
+      key={index}
+      className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+    >
+      <div className="w-20 h-20 rounded-full mx-auto mb-4 bg-gradient-to-br from-slate-500 to-slate-700 flex items-center justify-center shadow-lg overflow-hidden">
+        {member.photo ? (
+          <img
+            src={member.photo}
+            alt={member.name}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <span className="text-white text-xl font-bold">
+            {member.name.charAt(0)}
+          </span>
+        )}
+      </div>
+
+      <h5 className="font-bold text-lg text-[#1d466e] mb-2">
+        {member.name}
+      </h5>
+      <p className="text-sm text-slate-600 font-semibold bg-slate-100 px-3 py-1 rounded-full inline-block">
+        {member.role}
+      </p>
+    </div>
+  ))}
+</div>
 
         {/* PhD Supervision Completed Section */}
         <div className="mt-4">

@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, {useEffect, useState } from "react";
 import { X, Zap, Radio, Antenna, Wifi, MapPin, Plane, Brain, ZoomIn } from "lucide-react";
 
 // Import all images directly
+import L_Band_Power_Amplifier from "../assets/Industry_corner/L-Band Power Amplifier (100W).png";
+import UHF_SATCOM_Link_Power_Amplifier from "../assets/Industry_corner/UHF SATCOM LINK Power Amplifier.png";
 import ris_implementation_scenario from "../assets/turn_key_solution/ris_implementation_scenario.png";
 import ris_simulation_environment from "../assets/turn_key_solution/ris_simulation_environment.png";
 import ris_fabricated_prototype from "../assets/turn_key_solution/ris_fabricated_prototype.png";
@@ -21,15 +23,36 @@ import rf_drone_detection_localization_result_2 from "../assets/turn_key_solutio
 import ai_anpr_setup from "../assets/turn_key_solution/ai_anpr_setup.png";
 import ai_anpr_pipeline from "../assets/turn_key_solution/ai_anpr_pipeline.png";
 import ai_anpr_validation_results from "../assets/turn_key_solution/ai_anpr_validation_results.png";
+import anetenna_Architecture from "../assets/turn_key_solution/Architecture of the proposed active matching integrated antenna..png";
+import antenna_fabricated_prototype_AMN from "../assets/turn_key_solution/Fabricated prototype of the AMN-integrated antenna.png";
+import Proposed_non_Foster from "../assets/turn_key_solution/Proposed non-Foster AMN de-embedded in the proposed monopole..png";
 
 const solutionsData = [
+     {
+    id: "Pa-Modules",
+    title: "R&D on Power Amplifier Modules",
+    icon: Radio,
+    content: "Featuring high-performance Power Amplifiers designed with industry-grade mechanical housing for superior reliability and robust operation in demanding environments.",
+    images: [
+      { src: L_Band_Power_Amplifier, alt: "L-Band Power Amplifier" },
+      { src: UHF_SATCOM_Link_Power_Amplifier, alt: "UHF SATCOM Link Power Amplifier" },
+    ],
+    sharedLabel: "100 W Power Amplifiers with industry grade mechanical housing",
+    theme: {
+      bg: "bg-gradient-to-br from-indigo-50 via-indigo-100 to-indigo-200",
+      accent: "text-amber-700",
+      border: "border-amber-300",
+      button: "bg-amber-600 hover:bg-amber-700",
+      glow: "shadow-amber-200"
+    }
+  },
   {
     id: "ris",
-    title: "RIS (Reconfigurable Intelligent Surfaces)",
+    title: "R&D on RIS (Reconfigurable Intelligent Surfaces)",
     icon: Zap,
     content: "A new paradigm in wireless communications, Reconfigurable Intelligent Surfaces (RIS) create a Smart Radio Environment (SRE). These metasurfaces ensure a higher quality signal reaches receivers by intelligently modifying the channel environment itself, overcoming traditional limitations like signal scattering without the increased cost and complexity of new network protocols.",
     images: [
-      { src: ris_implementation_scenario, alt: "RIS Implementation Scenario in 5G", label: "5G Implementation Scenario" },
+      { src: ris_implementation_scenario, alt: "RIS Implementation Scenario in 5G", label: "Implementation scenario of the RIS" },
       { src: ris_simulation_environment, alt: "RIS Simulation Environment", label: "Simulation Environment" },
       { src: ris_fabricated_prototype, alt: "Fabricated RIS Prototype", label: "Fabricated 8x8 Prototype" },
     ],
@@ -43,7 +66,7 @@ const solutionsData = [
   },
   {
     id: "sdr",
-    title: "SDR Solutions",
+    title: "R&D on SDR Solutions",
     icon: Radio,
     content: "Software-Defined Radio (SDR) solutions featuring an advanced All-Programmable System-on-Chip (APSoC) based Digital Pre-Distortion (DPD) system. The architecture is capable of linearizing a 50W GaN Doherty Power Amplifier and includes modules for Inverse Modelling, Non-Linearity Correction, and a real-time RF Transceiver Interface.",
     images: [
@@ -58,15 +81,33 @@ const solutionsData = [
       glow: "shadow-indigo-200"
     }
   },
-  {
+   {
     id: "active-antenna",
-    title: "Active Antenna",
+    title: "R&D on Active Antennas",
     icon: Antenna,
-    content: "Sophisticated active antenna designs for high-frequency applications, including a 2-Way Power Combining structure that transitions seamlessly from chip to PCB to waveguide. Operating at 47 GHz, the design is managed with gold bond wires for robust connections. S-parameter results demonstrate excellent performance with high gain and low return loss.",
+    content: "Introducing an advanced active matching integrated antenna system designed for next-generation wireless applications. The architecture features an innovative Active Matching Network (AMN) seamlessly integrated with the antenna structure, enabling dynamic impedance tuning for optimal performance across wide frequency bands. The fabricated prototype demonstrates the effectiveness of the AMN integration, while the non-Foster AMN de-embedding in the monopole configuration highlights significant improvements in bandwidth and efficiency. This solution is ideal for applications demanding high adaptability and superior RF characteristics.",
+    images: [
+      { src: anetenna_Architecture, alt: "Architecture of the proposed active matching integrated antenna", label: "Active Matching Integrated Antenna Architecture" },
+      { src: antenna_fabricated_prototype_AMN, alt: "Fabricated prototype of the AMN-integrated antenna", label: "Fabricated AMN-Integrated Antenna" },
+      { src: Proposed_non_Foster, alt: "Proposed non-Foster AMN de-embedded in the proposed monopole", label: "Non-Foster AMN De-Embedded Monopole" },
+    ],
+    theme: {
+      bg: "bg-gradient-to-br from-teal-50 via-emerald-50 to-green-50",
+      accent: "text-teal-800",
+      border: "border-teal-300",
+      button: "bg-teal-600 hover:bg-teal-700",
+      glow: "shadow-teal-200"
+    }
+  },
+  {
+    id: "packaging",
+    title: "R&D on Packaging",
+    icon: Antenna,
+    content: "Our packaging solutions are engineered to ensure the integrity and performance of high-frequency active antenna modules. The design emphasizes robust chip-to-PCB transitions and precise integration of critical components, safeguarding signal fidelity and minimizing losses. Advanced materials and layout strategies are employed to support thermal management and mechanical stability, making these packaging solutions ideal for demanding RF and microwave applications where reliability and efficiency are paramount.",
     images: [
       { src: active_antenna_power_combining_layout, alt: "Active Antenna Power Combining Layout", label: "2-Way Power Combiner" },
       { src: active_antenna_chip_transition, alt: "Active Antenna Chip to PCB Transition", label: "Chip-to-PCB Transition" },
-      { src: active_antenna_s_parameters, alt: "Active Antenna S-Parameters Graph", label: "S-Parameter Results" },
+     
     ],
     theme: {
       bg: "bg-gradient-to-br from-teal-50 via-emerald-50 to-green-50",
@@ -78,7 +119,7 @@ const solutionsData = [
   },
   {
     id: "lora",
-    title: "LoRa",
+    title: "R&D on LoRa",
     icon: Wifi,
     content: "Robust LoRa (Long Range) mesh networking solutions designed for reliable, long-distance communication. The mesh algorithm intelligently manages network traffic to avoid packet collisions using Channel Activity Detection (CAD). To extend range, the system uses 'hopping' (rebroadcasting data), with a Time-To-Live (TTL) counter to prevent infinite loops. Ideal for asset tracking and connecting diverse devices.",
     images: [
@@ -87,16 +128,16 @@ const solutionsData = [
       { src: lora_hardware_and_app, alt: "LoRa Handheld Hardware and Application", label: "Handheld Device & App" },
     ],
     theme: {
-      bg: "bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50",
-      accent: "text-orange-800",
-      border: "border-orange-300",
-      button: "bg-orange-600 hover:bg-orange-700",
-      glow: "shadow-orange-200"
+      bg: "bg-gradient-to-br from-blue-50 via-sky-50 to-cyan-50",
+      accent: "text-sky-800",
+      border: "border-sky-300",
+      button: "bg-sky-600 hover:bg-sky-700",
+      glow: "shadow-sky-200"
     }
   },
   {
     id: "rf-location",
-    title: "RF Location & Direction Finding",
+    title: "R&D on RF Location & Direction Finding",
     icon: MapPin,
     content: "RF localization is critical for modern security, from ensuring airspace safety against UAVs to tracking beacons. Advanced techniques like Digital Beamforming and Monopulse Tracking are employed for precise RF source localization. Once a target is acquired via beamforming, the monopulse technique is used for fine-grained tracking, reducing algorithmic complexity.",
     images: [
@@ -104,16 +145,16 @@ const solutionsData = [
       { src: rf_location_hardware_setup, alt: "RF Location Finding Hardware Setup", label: "Direction Finding Array" },
     ],
     theme: {
-      bg: "bg-gradient-to-br from-rose-50 via-pink-50 to-red-50",
-      accent: "text-rose-800",
-      border: "border-rose-300",
-      button: "bg-rose-600 hover:bg-rose-700",
-      glow: "shadow-rose-200"
+      bg: "bg-gradient-to-br from-indigo-50 via-purple-50 to-violet-50",
+      accent: "text-indigo-800",
+      border: "border-indigo-300",
+      button: "bg-indigo-600 hover:bg-indigo-700",
+      glow: "shadow-indigo-200"
     }
   },
   {
     id: "rf-drone",
-    title: "RF Drone Detection",
+    title: "R&D on RF Drone Detection",
     icon: Plane,
     content: "A practical application of location-finding technology. The hardware features a uniform circular array (UCA) of wideband antennas mounted on a mobile platform. Field tests using a 300 MHz UCA successfully localized an RF emitter with an accuracy of approximately 10m x 10m, proving the concept's effectiveness for real-world drone detection scenarios.",
     images: [
@@ -131,7 +172,7 @@ const solutionsData = [
   },
   {
     id: "ai",
-    title: "AI (Artificial Intelligence)",
+    title: "R&D on AI (Artificial Intelligence)",
     icon: Brain,
     content: "Leveraging AI for an Automatic Number Plate Recognition (ANPR) system. An IP camera connected to a Jetson Xavier NX processing unit powers the system. The pipeline involves Image Acquisition, Number Plate Extraction, Pre-processing, and Character Recognition. Using the YOLOv5s model, the system demonstrates high accuracy in detecting license plates under various conditions.",
     images: [
@@ -151,6 +192,9 @@ const solutionsData = [
 
 const TurnkeySolutions = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const ImageModal = ({ image, onClose }) => (
     <div 
@@ -179,22 +223,23 @@ const TurnkeySolutions = () => {
     </div>
   );
 
-  const ImageGallery = ({ images, theme }) => {
-    const getGridClass = (count) => {
-      if (count === 1) return "grid-cols-1 max-w-2xl mx-auto";
-      if (count === 2) return "grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-8";
-      return "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";
-    };
+const ImageGallery = ({ images, theme, sharedLabel }) => {
+  const getGridClass = (count) => {
+    if (count === 1) return "grid-cols-1 max-w-2xl mx-auto";
+    if (count === 2) return "grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-8";
+    return "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";
+  };
 
-    return (
-      <div className={`grid ${getGridClass(images.length)} mt-10`}>
+  return (
+    <div className="mt-10">
+      {/* Images grid */}
+      <div className={`grid ${getGridClass(images.length)}`}>
         {images.map((image, index) => (
           <div
             key={index}
             onClick={() => setSelectedImage(image)}
             className={`group relative overflow-hidden rounded-2xl ${theme.border} border-2 cursor-pointer transform hover:scale-[1.02] transition-all duration-500 hover:shadow-2xl ${theme.glow} bg-white`}
           >
-            {/* Image Container with Consistent Aspect Ratio */}
             <div className="relative bg-gray-50 p-4">
               <img
                 src={image.src}
@@ -202,8 +247,6 @@ const TurnkeySolutions = () => {
                 className="w-full h-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-[1.03]"
                 style={{ minHeight: '200px', maxHeight: '400px' }}
               />
-              
-              {/* Hover Overlay */}
               <div className="absolute inset-4 bg-black/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 transform scale-75 group-hover:scale-100 transition-transform duration-300">
                   <ZoomIn className="w-6 h-6 text-gray-700" />
@@ -211,20 +254,33 @@ const TurnkeySolutions = () => {
               </div>
             </div>
 
-            {/* Label */}
-            <div className="p-4 bg-white border-t border-gray-100">
-              <h3 className={`font-semibold text-sm ${theme.accent} text-center leading-tight`}>
-                {image.label}
-              </h3>
-            </div>
+            {/* Only show image.label if sharedLabel is NOT provided */}
+            {!sharedLabel && image.label && (
+              <div className="p-4 bg-white border-t border-gray-100">
+                <h3 className={`font-semibold text-sm ${theme.accent} text-center leading-tight`}>
+                  {image.label}
+                </h3>
+              </div>
+            )}
           </div>
         ))}
       </div>
-    );
-  };
+
+      {/* If sharedLabel is provided, show it ONCE below the grid */}
+      {sharedLabel && (
+        <div className="mt-6 text-center">
+          <h3 className={`font-semibold text-base ${theme.accent}`}>
+            {sharedLabel}
+          </h3>
+        </div>
+      )}
+    </div>
+  );
+};
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+    <div id="main-content"
+     className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
       <div className="container mx-auto px-6 lg:px-12 py-16">
         {/* Header */}
         <header className="text-center mb-20">
@@ -292,7 +348,12 @@ const TurnkeySolutions = () => {
                   </div>
 
                   {/* Images */}
-                  <ImageGallery images={solution.images} theme={solution.theme} />
+                 <ImageGallery 
+  images={solution.images} 
+  theme={solution.theme} 
+  sharedLabel={solution.sharedLabel}
+/>
+
                 </div>
               </section>
             );

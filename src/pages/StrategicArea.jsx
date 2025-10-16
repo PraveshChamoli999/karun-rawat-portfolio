@@ -134,8 +134,7 @@ const StrategicArea = () => {
           </h1>
           
           <p className="text-lg sm:text-xl text-slate-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-            Advancing power amplifier technology for defense, aerospace, and strategic communication through 
-            sustainable, compact, and high-efficiency MMIC and board-level designs.
+            Advancing power amplifier technology through sustainable, compact, and high-efficiency MMIC and board-level designs.
           </p>
 
           {/* Hero Image */}

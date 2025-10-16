@@ -1,24 +1,35 @@
-import React, { useState } from "react";
-import { Cpu, Zap, Settings, X, ZoomIn, ChevronRight, Award, Clock, Battery, Thermometer } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Cpu, Zap, Settings, X, ZoomIn } from "lucide-react";
 
 // Import images
-import GanMMIC from "../assets/ResearchArea/Gan_MMIC_in_Enclosure.png";
-import KuBandMMIC from "../assets/ResearchArea/Ku Band MMIC PA.png";
+import GanMMICEnclosure from "../assets/ResearchArea/Gan_MMIC_in_Enclosure.png";
+import GaN_MMIC_on_Testing from "../assets/ResearchArea/GaN_MMIC_on(testing).png";
+import C_Ku_Ultra_Wideband_PA from "../assets/ResearchArea/C-Ku Band Ultra Wideband MMIC PA.png";
+import Ku_Band_MMIC_PA from "../assets/ResearchArea/Ku Band MMIC PA.png";
 import SiGePA from "../assets/Technology/SiGe_PA_Chip.png";
 import CMOS from "../assets/ResearchArea/cmos.png";
+import ClassEPA from "../assets/ResearchArea/Class E Power Amplifier Chip.png";
 
 const RFIntegratedCircuits = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const sections = [
     {
       id: "gan",
-      title: "GaN Based MMIC",
+      title: "R&D on GaN Based MMIC",
       icon: Zap,
-      text: "Gallium Nitride (GaN) technology represents the cutting edge of high-power, high-frequency semiconductor applications. Our GaN chip development focuses on creating robust, efficient power amplifiers capable of operating at extreme conditions. These chips deliver exceptional power density and thermal performance, making them ideal for 5G infrastructure, satellite communications, and defense applications.",
+      text: "Gallium Nitride (GaN) technology represents the cutting edge of high-power, high-frequency semiconductor applications. Our GaN MMIC development focuses on creating robust, efficient power amplifiers capable of operating at extreme conditions. These monolithic microwave integrated circuits deliver exceptional power density and thermal performance, making them ideal for 5G infrastructure, satellite communications. Our comprehensive GaN MMIC portfolio includes ultra-wideband power amplifiers spanning C-band to Ku-band frequencies.",
       images: [
-        { src: GanMMIC, alt: "GaN MMIC in Enclosure", label: "GaN MMIC Packaged Design" },
-        { src: KuBandMMIC, alt: "Ku Band MMIC PA", label: "Ku-Band Power Amplifier" }
+         { src: C_Ku_Ultra_Wideband_PA, alt: "C-Ku Band Ultra Wideband MMIC PA", label: "GaN MMIC Tapeout" },
+              { src: Ku_Band_MMIC_PA, alt: "Ku Band MMIC PA", label: "GaN MMIC on carrier plate" },
+        { src: GaN_MMIC_on_Testing, alt: "GaN MMIC on Testing", label: "GaN MMIC on Test Jig" },
+        { src: GanMMICEnclosure, alt: "GaN MMIC in Enclosure", label: "GaN MMIC on Module" },
+       
+   
       ],
       theme: {
         bg: "bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50",
@@ -26,21 +37,30 @@ const RFIntegratedCircuits = () => {
         border: "border-emerald-200",
         button: "bg-emerald-600 hover:bg-emerald-700",
         glow: "shadow-emerald-200/50"
-      },
-      specs: [
-        { icon: Zap, label: "High power density > 5W/mm", value: "5W/mm" },
-        { icon: Award, label: "Operating frequency up to", value: "40 GHz" },
-        { icon: Thermometer, label: "Excellent thermal management", value: "200°C" },
-        { icon: ChevronRight, label: "Wide bandgap technology", value: "3.4 eV" }
-      ]
+      }
     },
     {
-      id: "sige",
-      title: "SiGe BiCMOS based RFIC",
+      id: "silicon",
+      title: "R&D on Silicon Based RFIC",
       icon: Cpu,
-      text: "Our Silicon-Germanium (SiGe) BiCMOS power amplifiers represent a breakthrough in millimeter-wave circuit design. Featuring a fully integrated, inductor-less architecture, these chips deliver exceptional performance while maintaining cost-effectiveness. The advanced SiGe technology enables high-frequency operation with superior noise characteristics and power efficiency.",
-      images: [
-        { src: SiGePA, alt: "SiGe PA Chip", label: "SiGe Power Amplifier Chip" }
+      text: "Our silicon-based RF integrated circuits encompass advanced SiGe BiCMOS and CMOS technologies, delivering cost-effective, scalable, and high-performance RF solutions. These integrated circuits combine the benefits of both technologies to provide comprehensive solutions for broadband communication, satellite systems, and commercial wireless applications where integration, efficiency, and cost-effectiveness are key requirements.",
+      subsections: [
+        {
+          title: "SiGe BiCMOS based RFIC",
+          text: "Our Silicon-Germanium (SiGe) BiCMOS power amplifiers represent a breakthrough in millimeter-wave circuit design. Featuring a fully integrated, inductor-less architecture, these chips deliver exceptional performance while maintaining cost-effectiveness. The advanced SiGe technology enables high-frequency operation with superior noise characteristics and power efficiency.",
+          images: [
+            { src: SiGePA, alt: "SiGe PA Chip", label: "SiGe Power Amplifier Chip" }
+          ]
+        },
+        {
+          title: "CMOS based RFIC",
+          text: "Complementary Metal-Oxide-Semiconductor (CMOS) technology forms the backbone of modern digital and mixed-signal circuits. Our CMOS implementations emphasize scalability, ultra-low power consumption, and high integration density. These solutions are perfect for IoT applications, mobile communications, and battery-powered devices where efficiency is paramount.",
+          images: [
+            { src: CMOS, alt: "CMOS Technology", label: "CMOS Circuit Design" },
+            { src: ClassEPA, alt: "Class E Power Amplifier Chip", label: "Class E Power Amplifier" }
+          ],
+          commonCaption: "CMOS Circuit Implementation"
+        }
       ],
       theme: {
         bg: "bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50",
@@ -48,97 +68,120 @@ const RFIntegratedCircuits = () => {
         border: "border-blue-200",
         button: "bg-blue-600 hover:bg-blue-700",
         glow: "shadow-blue-200/50"
-      },
-      specs: [
-        { icon: Award, label: "Inductor-less design", value: "Compact" },
-        { icon: Zap, label: "Millimeter-wave operation", value: "60+ GHz" },
-        { icon: Cpu, label: "High integration level", value: "95%" },
-        { icon: Clock, label: "Excellent noise figure", value: "< 3 dB" }
-      ]
-    },
-    {
-      id: "cmos",
-      title: "CMOS based RFIC",
-      icon: Settings,
-      text: "Complementary Metal-Oxide-Semiconductor (CMOS) technology forms the backbone of modern digital and mixed-signal circuits. Our CMOS implementations emphasize scalability, ultra-low power consumption, and high integration density. These solutions are perfect for IoT applications, mobile communications, and battery-powered devices where efficiency is paramount.",
-      images: [
-        { src: CMOS, alt: "CMOS Technology", label: "CMOS Circuit Implementation" }
-      ],
-      theme: {
-        bg: "bg-gradient-to-br from-purple-50 via-violet-50 to-fuchsia-50",
-        accent: "text-purple-700",
-        border: "border-purple-200",
-        button: "bg-purple-600 hover:bg-purple-700",
-        glow: "shadow-purple-200/50"
-      },
-      specs: [
-        { icon: Battery, label: "Ultra-low power consumption", value: "< 100mW" },
-        { icon: Award, label: "High scalability", value: "28nm & below" },
-        { icon: Clock, label: "Cost-effective manufacturing", value: "High Volume" },
-        { icon: Thermometer, label: "Wide temperature range", value: "-40°C to 125°C" }
-      ]
-    },
+      }
+    }
   ];
 
   const ImageModal = ({ image, onClose }) => (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md p-4" onClick={onClose}>
-      <div className="relative max-w-6xl max-h-full flex items-center justify-center">
-        <img 
-          src={image.src} 
-          alt={image.alt} 
-          className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-          onClick={(e) => e.stopPropagation()}
-        />
-        <button 
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4" 
+      onClick={onClose}
+    >
+      <div className="relative max-w-7xl max-h-[95vh] bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-white bg-red-500 hover:bg-red-600 rounded-full p-2 transition-all duration-200"
+          className="absolute top-4 right-4 z-10 p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-white transition-colors"
         >
-          <X className="w-6 h-6" />
+          <X className="w-6 h-6 text-gray-700" />
         </button>
-        <div className="absolute bottom-4 left-4 right-4 bg-black/70 text-white p-4 rounded-lg backdrop-blur-sm">
-          <h3 className="text-lg font-semibold text-center">{image.label}</h3>
+        <div className="p-4">
+          <img
+            src={image.src}
+            alt={image.alt}
+            className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <div className="mt-4 text-center">
+            <h3 className="text-xl font-semibold text-gray-800">{image.label}</h3>
+          </div>
         </div>
       </div>
     </div>
   );
 
-  const InteractiveImage = ({ src, alt, caption, theme, className = "" }) => {
-    const [isHovered, setIsHovered] = useState(false);
-    
+  const ImageGallery = ({ images, theme, showIndividualLabels = true }) => {
+    const getGridClass = (count) => {
+      if (count === 1) return "grid-cols-1 max-w-2xl mx-auto";
+      if (count === 2) return "grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-8";
+      if (count === 4) return "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6";
+      return "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";
+    };
+
     return (
-      <div 
-        className={`group cursor-pointer transition-all duration-300 ${className}`}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        onClick={() => setSelectedImage({ src, alt, label: caption })}
-      >
-        <div className={`relative overflow-hidden rounded-xl bg-white shadow-md border ${theme.border} transition-all duration-300 ${isHovered ? 'shadow-xl -translate-y-1' : ''}`}>
-          <div className="relative overflow-hidden bg-gray-100 p-4">
-            <img 
-              src={src} 
-              alt={alt} 
-              className={`w-full h-48 object-contain transition-transform duration-300 ${isHovered ? 'scale-105' : ''}`}
-            />
-            <div className={`absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition-opacity duration-300 ${isHovered ? 'opacity-100' : ''}`} />
-            <div className={`absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full p-2 opacity-0 transition-all duration-300 ${isHovered ? 'opacity-100 scale-100' : 'scale-75'}`}>
-              <ZoomIn className="w-4 h-4 text-gray-700" />
+      <div className={`grid ${getGridClass(images.length)} mt-10`}>
+        {images.map((image, index) => (
+          <div
+            key={index}
+            onClick={() => setSelectedImage(image)}
+            className={`group relative overflow-hidden rounded-2xl ${theme.border} border-2 cursor-pointer transform hover:scale-[1.02] transition-all duration-500 hover:shadow-2xl ${theme.glow} bg-white`}
+          >
+            {/* Image Container with Consistent Aspect Ratio */}
+            <div className="relative bg-gray-50 p-4">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-auto object-contain rounded-lg transition-transform duration-500 group-hover:scale-[1.03]"
+                style={{ minHeight: '200px', maxHeight: '400px' }}
+              />
+              
+              {/* Hover Overlay */}
+              <div className="absolute inset-4 bg-black/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                  <ZoomIn className="w-6 h-6 text-gray-700" />
+                </div>
+              </div>
             </div>
+
+            {/* Individual Label - only show if showIndividualLabels is true */}
+            {showIndividualLabels && (
+              <div className="p-4 bg-white border-t border-gray-100">
+                <h3 className={`font-semibold text-sm ${theme.accent} text-center leading-tight`}>
+                  {image.label}
+                </h3>
+              </div>
+            )}
           </div>
-          {caption && (
-            <div className="p-3 text-center bg-white">
-              <p className="text-sm font-medium text-gray-700">{caption}</p>
-            </div>
-          )}
-        </div>
+        ))}
       </div>
     );
   };
 
+  const SubsectionImages = ({ subsection, theme, index }) => (
+    <div className="mt-16 p-8 bg-white/60 backdrop-blur-sm rounded-3xl border-2 border-white/80 shadow-xl">
+      <div className="flex items-center gap-6 mb-8">
+        <div className={`p-4 rounded-2xl ${theme.button} shadow-xl transform hover:scale-110 transition-transform duration-300`}>
+          <Settings className="w-8 h-8 text-white" />
+        </div>
+        <div className="flex-1">
+          <h4 className={`text-3xl lg:text-4xl font-extrabold ${theme.accent} mb-3 drop-shadow-lg`}>
+            {subsection.title}
+          </h4>
+          <div className={`h-1.5 w-24 ${theme.button} rounded-full shadow-md`} />
+        </div>
+      </div>
+      <p className="text-gray-700 text-lg mb-10 leading-relaxed">
+        {subsection.text}
+      </p>
+      <ImageGallery 
+        images={subsection.images} 
+        theme={theme} 
+        showIndividualLabels={!subsection.commonCaption} 
+      />
+      {subsection.commonCaption && (
+        <div className="mt-8 text-center">
+          <div className={`inline-block px-8 py-4 bg-gradient-to-r ${theme.button} text-blue-800 text-xl font-bold rounded-2xl shadow-xl`}>
+            {subsection.commonCaption}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      <div className="container mx-auto px-6 lg:px-12 py-16">
         {/* Header */}
-        <header className="text-center mb-16">
+        <header className="text-center mb-20">
           <div className="inline-flex items-center justify-center p-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full mb-6">
             <div className="bg-white rounded-full px-6 py-2">
               <span className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -146,22 +189,22 @@ const RFIntegratedCircuits = () => {
               </span>
             </div>
           </div>
-          
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+
+          <h1 className="text-5xl lg:text-7xl font-extrabold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
               RF Integrated Circuits
             </span>
           </h1>
-          
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
+
+          <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
             Design and development of cutting-edge RF integrated circuits using advanced semiconductor technologies for next-generation applications
           </p>
-          
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+
+          <div className="mt-8 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
         </header>
 
         {/* Technology Sections */}
-        <div className="space-y-16">
+        <div className="space-y-24">
           {sections.map((section, index) => {
             const Icon = section.icon;
             return (
@@ -170,9 +213,17 @@ const RFIntegratedCircuits = () => {
                 id={section.id}
                 className={`relative overflow-hidden rounded-3xl ${section.theme.bg} ${section.theme.border} border-2 shadow-xl hover:shadow-2xl transition-all duration-500`}
               >
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-5">
+                  <div className="absolute inset-0" style={{
+                    backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
+                    backgroundSize: '30px 30px'
+                  }} />
+                </div>
+
                 <div className="relative p-8 lg:p-12">
                   {/* Section Header */}
-                  <div className="flex flex-col lg:flex-row lg:items-center gap-6 mb-8">
+                  <div className="flex items-center gap-6 mb-8">
                     <div className={`p-4 rounded-2xl ${section.theme.button} shadow-lg transform hover:scale-110 transition-transform duration-300`}>
                       <Icon className="w-8 h-8 text-white" />
                     </div>
@@ -182,78 +233,43 @@ const RFIntegratedCircuits = () => {
                       </h2>
                       <div className={`h-1 w-20 ${section.theme.button} rounded-full`} />
                     </div>
-                    <div className="hidden lg:block text-6xl font-bold text-black/5">
-                      {String(index + 1).padStart(2, '0')}
-                    </div>
                   </div>
 
-                  {/* Content Grid */}
-                  <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-8">
-                    {/* Text Content */}
-                    <div className="lg:col-span-3">
-                      <div className="mb-6">
-                        <p className="text-gray-700 text-lg leading-relaxed">
-                          {section.text}
-                        </p>
-                      </div>
-                      
-                      {/* Specifications */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {section.specs.map((spec, specIndex) => {
-                          const SpecIcon = spec.icon;
-                          return (
-                            <div key={specIndex} className="flex items-start gap-3 p-3 bg-white/50 rounded-lg">
-                              <div className={`p-2 rounded-full ${section.theme.button}`}>
-                                <SpecIcon className="w-4 h-4 text-white" />
-                              </div>
-                              <div>
-                                <div className="text-sm text-gray-600">{spec.label}</div>
-                                <div className="font-semibold text-gray-800">{spec.value}</div>
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
+                  {/* Content */}
+                  <div className="mb-8">
+                    <p className="text-gray-700 text-lg leading-relaxed max-w-5xl">
+                      {section.text}
+                    </p>
+                  </div>
 
-                    {/* Images */}
-                    <div className="lg:col-span-2 space-y-6">
-                      {section.images.map((image, imgIndex) => (
-                        <InteractiveImage
-                          key={imgIndex}
-                          src={image.src}
-                          alt={image.alt}
-                          caption={image.label}
+                  {/* Images for GaN section or Subsections for Silicon */}
+                  {section.images ? (
+                    <ImageGallery images={section.images} theme={section.theme} />
+                  ) : (
+                    <div className="space-y-20">
+                      {section.subsections?.map((subsection, subIndex) => (
+                        <SubsectionImages
+                          key={subIndex}
+                          subsection={subsection}
                           theme={section.theme}
+                          index={subIndex}
                         />
                       ))}
                     </div>
-                  </div>
+                  )}
                 </div>
               </section>
             );
           })}
         </div>
 
-        {/* Technology Comparison */}
-        <section className="mt-20 bg-white rounded-3xl p-8 shadow-xl">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Technology Comparison</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {sections.map((section, index) => (
-              <div key={index} className={`p-6 rounded-2xl ${section.theme.bg} border ${section.theme.border}`}>
-                <h3 className={`text-xl font-bold ${section.theme.accent} mb-4`}>{section.title}</h3>
-                <ul className="space-y-2">
-                  {section.specs.slice(0, 3).map((spec, specIndex) => (
-                    <li key={specIndex} className="flex items-center gap-2 text-sm text-gray-700">
-                      <ChevronRight className="w-4 h-4" />
-                      {spec.label}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
+        {/* Footer */}
+        <div className="mt-24 text-center">
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6"></div>
+          <p className="text-gray-500 text-lg">
+            Innovating at the intersection of semiconductor technology and RF engineering
+          </p>
+        </div>
       </div>
 
       {/* Image Modal */}

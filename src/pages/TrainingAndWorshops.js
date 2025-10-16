@@ -150,10 +150,7 @@ const NewsAndEvents = () => {
                   </div>
                 ) : (
                   <>
-                    <div className="flex items-center gap-4 mb-6 p-6 border-b border-blue-100">
-                      <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-400 rounded-full"></div>
-                      <h2 className="text-2xl font-bold text-gray-800">Latest News</h2>
-                    </div>
+
                     <div className="grid gap-4 p-6">
                       {newsList.map((news, index) => (
                         <NewsItem key={news._id || index} item={news} />
@@ -177,10 +174,7 @@ const NewsAndEvents = () => {
                   </div>
                 ) : (
                   <>
-                    <div className="flex items-center gap-4 mb-6 p-6 border-b border-teal-100">
-                      <div className="w-2 h-8 bg-gradient-to-b from-teal-500 to-teal-400 rounded-full"></div>
-                      <h2 className="text-2xl font-bold text-gray-800">Our Workshops</h2>
-                    </div>
+
                     <div className="grid gap-2 p-6">
                       {workshops
                         .filter((w) => w.type === "workshop")

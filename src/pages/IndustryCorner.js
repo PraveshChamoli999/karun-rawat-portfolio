@@ -23,13 +23,12 @@ import Wideband_highly_efficient_RF from "../assets/Industry_corner/Wideband hig
 import L_Band_Power_Amplifier from "../assets/Industry_corner/L-Band Power Amplifier (100W).png";
 import UHF_SATCOM_Link_Power_Amplifier from "../assets/Industry_corner/UHF SATCOM LINK Power Amplifier.png";
 import Test_Bed_for_Char from "../assets/Industry_corner/Test-Bed for Characterization & Non-linear Behavioral Modeling.png";
-import N_Linear_Vector_Network_Analyzer from "../assets/Industry_corner/Non-Linear Vector Network Analyzer.png";
+import N_Linear_Vector_Network_Analyzer from "../assets/Industry_corner/Non-Linear Vector Network Analyzer.jpg";
 import High_Power_Device_Characterization from "../assets/Industry_corner/High Power Device Characterization.png";
 // Import sponsor logos
 import DST from "../assets/Home/DST_logo.png";
 import Wipro from "../assets/Home/Wipro_logo.png";
 import GF from "../assets/Home/Global_Foundries_logo.png";
-import DRDO from "../assets/Home/Drdo_logo.png";
 import AMP from "../assets/Home/Amp_logo.png";
 import Keysight from "../assets/Home/KeySight_logo.png";
 
@@ -59,21 +58,7 @@ const industrySections = [
           { src: Generalized_Doherty_PA, label: "Generalized Doherty PA" },
         ],
       },
-      {
-        heading: "DRDO-DEAL",
-        text: "Together with DRDO-DEAL, we delivered a 100W UHF SATCOM Link Power Amplifier and a 100W L-Band Power Amplifier. Both were designed for defense-grade reliability, performance, and communication resilience.",
-        highlights: ["Defense Grade",  "SATCOM Ready"],
-        images: [
-          {
-            src: L_Band_Power_Amplifier,
-            label: "L-Band Power Amplifier ",
-          },
-          {
-            src: UHF_SATCOM_Link_Power_Amplifier,
-            label: "UHF SATCOM LINK Power Amplifier",
-          },
-        ],
-      },
+
       {
         heading: "Startup: Linear Amptech",
         text: "Linear Amptech is a spin-off commercializing our RF innovations. The startup offers wideband RF power amplifier modules (2G/3G/4G), ultra-wideband linearizers, custom modem platforms, traffic safety systems (WAIT), and consumer/enterprise RF front-ends.",
@@ -124,7 +109,6 @@ const sponsors = [
   { name: "DST", logo: DST },
   { name: "Wipro", logo: Wipro },
   { name: "Global Foundries", logo: GF },
-  { name: "DRDO", logo: DRDO },
   { name: "AMP", logo: AMP },
   { name: "Keysight", logo: Keysight },
 ];
