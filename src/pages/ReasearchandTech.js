@@ -64,7 +64,7 @@ const ResearchandTech = () => {
     return () => clearTimeout(timer);
   }, [activeSection]);
 
-  // NEW: Make all research cards visible immediately when research-area is active
+  //  Make all research cards visible immediately when research-area is active
   useEffect(() => {
     if (activeSection === "research-area") {
       // Show all research cards immediately

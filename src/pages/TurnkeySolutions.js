@@ -2,7 +2,7 @@ import React, {useEffect, useState } from "react";
 import { X, Zap, Radio, Antenna, Wifi, MapPin, Plane, Brain, ZoomIn, Satellite } from "lucide-react";
 
 
-// Import all images directly
+// Import  images
 import L_Band_Power_Amplifier from "../assets/Industry_corner/L-Band Power Amplifier (100W).png";
 import UHF_SATCOM_Link_Power_Amplifier from "../assets/Industry_corner/UHF SATCOM LINK Power Amplifier.png";
 import ris_implementation_scenario from "../assets/turn_key_solution/ris_implementation_scenario.png";

@@ -246,7 +246,7 @@ const TeamAndMembers = () => {
       "Nishant Kumar",
       "PhD, 2021",
       "IIT Roorkee",
-      "Principle Engg. Design Enablement Texas Instruments (TI), Bangalore, India",
+      "Principal Engg. Design Enablement Texas Instruments (TI), Bangalore, India",
     ],
     [
       "Y. Mary Asha Latha",
