@@ -63,11 +63,6 @@ const StickyNavigation = ({ activeSection }) => {
       {/* Desktop Navigation */}
       <nav className="hidden lg:block fixed left-8 top-1/2 -translate-y-1/2 z-40 max-h-[90vh] overflow-y-auto">
         <div className="bg-white/90 backdrop-blur-lg rounded-2xl shadow-2xl border border-gray-200 p-4 w-64">
-          <div className="mb-4 pb-3 border-b border-gray-200">
-            <h3 className="font-bold text-sm text-gray-700 uppercase tracking-wide">
-              Navigation
-            </h3>
-          </div>
           
           <ul className="space-y-1">
             {navItems.map((item) => {
