@@ -39,7 +39,7 @@ const Publications = () => {
     { id: "conferences", label: "Conferences", icon: "🎤" },
   ];
 
-  // Styled list item component
+
   const PublicationItem = ({ item, index, type }) => (
     <div className="group flex items-start gap-4 p-4 hover:bg-gradient-to-r from-blue-50 to-white rounded-lg transition-all duration-300">
       <div className="flex-shrink-0 mt-1">

@@ -2,7 +2,7 @@ import React, {useEffect, useState } from "react";
 import { X, Zap, Radio, Antenna, Wifi, MapPin, Plane, Brain, ZoomIn, Satellite } from "lucide-react";
 
 
-// Import all images directly
+// Import  images
 import L_Band_Power_Amplifier from "../assets/Industry_corner/L-Band Power Amplifier (100W).png";
 import UHF_SATCOM_Link_Power_Amplifier from "../assets/Industry_corner/UHF SATCOM LINK Power Amplifier.png";
 import ris_implementation_scenario from "../assets/turn_key_solution/ris_implementation_scenario.png";
@@ -63,11 +63,6 @@ const StickyNavigation = ({ activeSection }) => {
       {/* Desktop Navigation */}
       <nav className="hidden lg:block fixed left-8 top-1/2 -translate-y-1/2 z-40 max-h-[90vh] overflow-y-auto">
         <div className="bg-white/90 backdrop-blur-lg rounded-2xl shadow-2xl border border-gray-200 p-4 w-64">
-          <div className="mb-4 pb-3 border-b border-gray-200">
-            <h3 className="font-bold text-sm text-gray-700 uppercase tracking-wide">
-              Navigation
-            </h3>
-          </div>
           
           <ul className="space-y-1">
             {navItems.map((item) => {

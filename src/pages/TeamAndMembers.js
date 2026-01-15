@@ -119,6 +119,12 @@ const TeamAndMembers = () => {
   ];
 
   const phdStudentsOngoing = [
+     {
+      name: "Ahmad Zakaria",
+      topic: "RF Packaging & Thermal Design for High Power Amplifiers",
+      photo: ahmed_zakaria_photo,
+      linkedin: "https://www.linkedin.com/in/ahmad-zakaria-ahmad-b63a39284/",
+    },
     {
       name: "Avinash Singh",
       topic:
@@ -172,12 +178,7 @@ const TeamAndMembers = () => {
       linkedin:
         "https://www.linkedin.com/in/amitsinghrf/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
-    {
-      name: "Ahmad Zakaria",
-      topic: "RF Packaging & Thermal Design for High Power Amplifiers",
-      photo: ahmed_zakaria_photo,
-      linkedin: "https://www.linkedin.com/in/ahmad-zakaria-ahmad-b63a39284/",
-    },
+   
   ];
 
   const mtechSupervisions = [
@@ -243,10 +244,16 @@ const TeamAndMembers = () => {
       "Placed at Global Foundries, Bangalore, India",
     ],
     [
+      "Anuj Kumar Sahoo",
+      "PhD, 2023",
+      "IIT Roorkee",
+      "Placed at R&D hardware engineer, Keysight Technologies, Gurugram"
+    ],
+    [
       "Nishant Kumar",
       "PhD, 2021",
       "IIT Roorkee",
-      "Principle Engg. Design Enablement Texas Instruments (TI), Bangalore, India",
+      "Principal Engg. Design Enablement Texas Instruments (TI), Bangalore, India",
     ],
     [
       "Y. Mary Asha Latha",
@@ -607,11 +614,11 @@ const TeamAndMembers = () => {
           </div>
         </div>
 
-        {/* Past Post-Doc Candidates Section */}
+        {/* PhD Alumni*/}
         <div className="mt-4">
           <h3 className="text-3xl font-bold text-[#1d466e] flex gap-3 mb-6 items-center">
             <span className="w-1 h-8 bg-gradient-to-b from-purple-500 to-purple-700 inline-block rounded"></span>
-            Past Post-Doc Candidates Worked
+            PhD Alumni 
           </h3>
           <div className="grid md:grid-cols-1 gap-4">
             {pastPostDocCandidates.map((candidate, index) => (
