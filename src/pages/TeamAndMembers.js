@@ -618,7 +618,7 @@ const TeamAndMembers = () => {
         <div className="mt-4">
           <h3 className="text-3xl font-bold text-[#1d466e] flex gap-3 mb-6 items-center">
             <span className="w-1 h-8 bg-gradient-to-b from-purple-500 to-purple-700 inline-block rounded"></span>
-            PhD Alumni 
+            Post-Doc Alumni
           </h3>
           <div className="grid md:grid-cols-1 gap-4">
             {pastPostDocCandidates.map((candidate, index) => (
