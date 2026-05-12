@@ -506,6 +506,12 @@ const AboutMe = () => {
         Roles at IIT Roorkee
       </h3>
       <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                <li>
+          <span className="font-semibold text-orange-700">
+            Dean, International Relations
+          </span>
+          , IIT Roorkee
+        </li>
         <li>
           <span className="font-semibold text-orange-700">
             Head, Centre for Semiconductor Design &amp; Technology
